@@ -7,7 +7,7 @@
     'summary': 'Help Desk',
     'description': '',
     'website': '',
-    'depends': [],
+    'depends': ['project', 'website'],
     'data': [],
     'test': [],
     'installable': True,
