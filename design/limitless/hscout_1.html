@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/widgets.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/tables/datatables/extensions/natural_sort.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/pages/datatables_basic.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body class="sidebar-xs has-detached-left">
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-default header-highlight">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#">
+						<span class="position-right">Mailbox</span>
+					</a>
+				</li>
+			</ul>
+
+            <ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="position-right">Reports</span>
+						<i class="icon-arrow-down12"></i>
+					</a>
+					
+					<div class="dropdown-menu dropdown-content">
+
+						<ul class="media-list dropdown-content-body width-150">
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-bubbles9"></i> Conversations</a>
+								</div>
+							</li>
+
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-stats-growth2"></i> Productivity</a>
+								</div>
+							</li>
+
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-users4"></i> Team</a>
+								</div>
+							</li>
+
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-thumbs-up2"></i> Happiness</a>
+								</div>
+							</li>
+
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-files-empty"></i> Docs</a>
+								</div>
+							</li>
+						</ul>
+
+						<div class="dropdown-content-footer">
+						</div>
+					</div>
+				</li>
+			</ul>
+
+            <ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="position-right">Manage</span>
+						<i class="icon-arrow-down12"></i>
+					</a>
+					
+					<div class="dropdown-menu dropdown-content">
+
+						<ul class="media-list dropdown-content-body width-150">
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn text-primary btn-sm"><i class="icon-price-tag2"></i> Tags</a>
+								</div>
+							</li>
+						</ul>
+
+						<div class="dropdown-content-footer">
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div class="navbar-right">
+				<ul class="nav navbar-nav">
+
+					<li class="dropdown dropdown-user">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<img src="assets/images/demo/users/face11.jpg" alt="">
+							<span>Victoria</span>
+							<i class="caret"></i>
+						</a>
+
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+							<li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+							<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+				<!-- Content area -->
+				<div class="content">
+
+					<!-- Detached sidebar -->
+					<div class="sidebar-detached">
+						<div class="sidebar sidebar-default">
+							<div class="sidebar-content">
+
+								<!-- Sub navigation -->
+								<div class="sidebar-category">
+									<div class="category-title">
+										<span>Desarrollo</span>
+									</div>
+
+									<div class="category-content no-padding">
+										<ul class="navigation navigation-alt navigation-accordion">
+											<li class="navigation-header">Options</li>
+											<li><a href="#"><i class="icon-mailbox"></i> Unassigned</a></li>
+											<li><a href="#"><i class="icon-hand"></i> Mine</a></li>
+											<li><a href="#"><i class="icon-copy3"></i> Drafts <span class="label bg-info-300">1</span></a></li>
+											<li><a href="#"><i class="icon-user"></i> Assigned <span class="label bg-info-300">2</span></a></li>
+											<li><a href="#"><i class="icon-inbox-alt"></i> Closed <span class="label bg-info-300">3</span></a></li>
+											<li><a href="#"><i class="icon-blocked"></i> Spam <span class="label bg-info-300">4</span></a></li>
+											<li class="navigation-divider"></li>
+											<li>
+												<a href="#"><i class="icon-plus22"></i> New Conversation</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- /sub navigation -->
+
+							</div>
+						</div>
+					</div>
+		            <!-- /detached sidebar -->
+
+					<!-- Container sidebar -->
+					<div class="container-detached">
+						<div class="content-detached">
+							<!-- Task manager table -->
+							<div class="panel panel-white">
+								<div class="panel-heading">
+									<h6 class="panel-title">Mailbox</h6>
+									<div class="heading-elements">
+										<ul class="icons-list">
+										</ul>
+									</div>
+								</div>
+
+								<!-- datatable-basic -->
+								<table class="table table-hover table-lg">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Customer</th>
+											<th>Conversation</th>
+											<th>Latest update</th>
+											<th>Assigned</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>#25</td>
+											<td>Today</td>
+											<td>
+												<label class="label label-info">info</label>
+												<label class="label label-warning">warning</label>
+												<div class="text-semibold"><a href="task_manager_detailed.html">New blog layout</a></div>
+												<div class="text-muted">Grumbled ripely eternal sniffed the when hello less much..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="22 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#" class="text-default"><i class="icon-plus22"></i></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#24</td>
+											<td>Today</td>
+											<td>
+												<label class="label label-danger">danger</label>
+												<label class="label label-default">default</label>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Create UI design model</a></div>
+												<div class="text-muted">One morning, when Gregor Samsa woke from troubled..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="22 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#" class="text-default"><i class="icon-plus22"></i></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#23</td>
+											<td>Today</td>
+											<td>
+												<label class="label label-success">success</label>
+												<div class="text-semibold"><a href="task_manager_detailed.html">New icons set for an iOS app</a></div>
+												<div class="text-muted">A collection of textile samples lay spread out on the table..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="22 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face13.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#22</td>
+											<td>Today</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Create ad campaign banners set</a></div>
+												<div class="text-muted">That he had recently cut out of an illustrated magazine..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="22 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face5.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#21</td>
+											<td>Yesterday</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Edit the draft for the icons</a></div>
+												<div class="text-muted">You've got to get enough sleep. Other travelling salesmen..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face18.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#20</td>
+											<td>Yesterday</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Fix validation issues and commit</a></div>
+												<div class="text-muted">But who knows, maybe that would be the best thing for me..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="22 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face25.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#19</td>
+											<td>Yesterday</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Support tickets list doesn't support commas</a></div>
+												<div class="text-muted">I'd have gone up to the boss and told him just what i think..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face12.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#18</td>
+											<td>Yesterday</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Help Web devs with HTML integration</a></div>
+												<div class="text-muted">Samsa was a travelling salesman - and above it there hung..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face24.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#17</td>
+											<td>2 days ago</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Another icon set</a></div>
+												<div class="text-muted">A wonderful serenity has taken possession of my entire soul..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="20 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face1.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#16</td>
+											<td>2 days ago</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">iOS application design mockups</a></div>
+												<div class="text-muted">Sweet mornings of spring which I enjoy with my whole heart..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face12.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#15</td>
+											<td>2 days ago</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">UI/UX design review</a></div>
+												<div class="text-muted">I am alone, and feel the charm of existence in this spot..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="20 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face19.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#14</td>
+											<td>2 days ago</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Marketing campaign review</a></div>
+												<div class="text-muted">Which was created for the bliss of souls like mine..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="20 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face3.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#13</td>
+											<td>2 days ago</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Fix website issues on mobile</a></div>
+												<div class="text-muted">I am so happy, my dear friend, so absorbed in the exquisite..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face18.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#12</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Add updated responsive styles</a></div>
+												<div class="text-muted">I should be incapable of drawing a single stroke at the present..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="17 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face11.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#11</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Merge latest changes</a></div>
+												<div class="text-muted">When, while the lovely valley teems with vapour around me..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="16 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face21.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#10</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Create landing page for a new app</a></div>
+												<div class="text-muted">A few stray gleams steal into the inner sanctuary, I throw..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="17 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face1.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#9</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Update JS code in app.js file</a></div>
+												<div class="text-muted">When I hear the buzz of the little world among the stalks..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="15 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face24.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#8</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Combine .js files in /app/js/</a></div>
+												<div class="text-muted">Insects and flies, then I feel the presence of the Almighty..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="14 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face1.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#7</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Create application Photoshop draft</a></div>
+												<div class="text-muted">Who formed us in his own image, and the breath of that universal..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="20 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face7.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#6</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Cartoon characters for app ads</a></div>
+												<div class="text-muted">My friend, when darkness overspreads my eyes, and heaven..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="17 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face10.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#5</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Google AdWords campain graphics</a></div>
+												<div class="text-muted">Seem to dwell in my soul and absorb its power, like the form..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="18 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face18.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#4</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Monthly statistics report</a></div>
+												<div class="text-muted">I sink under the weight of the splendour of these visions..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="19 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face24.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#3</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Create invoice template</a></div>
+												<div class="text-muted">Far far away, behind the word mountains, far from the..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="20 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face5.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#2</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Add images to the product gallery</a></div>
+												<div class="text-muted">Countries Vokalia and Consonantia, there live the blind..</div>
+											</td>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="21 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face13.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+
+										<tr>
+											<td>#1</td>
+											<td>Last week</td>
+											<td>
+												<div class="text-semibold"><a href="task_manager_detailed.html">Update User profile page</a></div>
+												<div class="text-muted">A small river named Duden flows by their place and supplies it..</div>
+											</td>
+											<td>
+												<div class="input-group input-group-transparent">
+													<div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+													<input type="text" class="form-control datepicker" value="19 January, 15">
+												</div>
+											</td>
+											<td class="text-center">
+												<a href="#"><img src="assets/images/demo/users/face20.jpg" class="img-circle img-xs" alt=""></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- /task manager table -->
+						</div>
+					</div>
+					<!-- /container sidebar -->
+
+					<!-- Footer -->
+					<div class="footer text-muted">
+						&copy; 2016. <a href="#">GlobalSTD Scout</a> by <a href="http://www.globalstd.com" target="_blank">GlobalSTD Software</a>
+					</div>
+					<!-- /footer -->
+
+				</div>
+				<!-- /content area -->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+
+</body>
+
+<!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:47 GMT -->
+</html>
