@@ -16,8 +16,14 @@ $(function() {
     // ------------------------------
 
     // Default initialization
-    $('.summernote').summernote();
-
+    $('.summernote').summernote({
+        styleWithSpan: false,
+        toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['view', ['codeview']],
+                    ['para', ['ul']]
+                ]
+        });
 
     // Control editor height
     $('.summernote-height').summernote({
