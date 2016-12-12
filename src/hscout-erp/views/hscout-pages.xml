@@ -271,5 +271,374 @@
                 </body>
             </html>
         </template>
+
+        <template name="Conversation" id="website.conversation" page="True">
+            <html lang="en">
+                <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+                <t t-call="hscout-erp.layout_head"/>
+                <body class="sidebar-xs has-detached-left">
+                    <!-- Main navbar -->
+                    <div class="navbar navbar-default header-highlight">
+                        <div class="navbar-collapse collapse" id="navbar-mobile">
+                            <ul class="nav navbar-nav">
+                            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><img width="20px" src="http://gms.globalstd.com/rutas_online/helpcounts.jpg" /></a></li>
+                            <li><a href="#">Mailbox</a></li>
+                            <li><a href="#">Docs</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports
+                                </a>
+                                <div class="dropdown-menu dropdown-content">
+                                    <ul class="media-list dropdown-content-body width-350">
+                                        <li class="media">
+                                        <div class="media-body">
+                                            Conversations
+                                        </div>
+                                        </li>
+                                        <li class="media">
+                                        <div class="media-body">
+                                            Productivity
+                                        </div>
+                                        </li>
+                                        <li class="media">
+                                        <div class="media-body">
+                                            Team
+                                        </div>
+                                        </li>
+                                        <li class="media">
+                                        <div class="media-body">
+                                            Happiness
+                                        </div>
+                                        </li>
+                                        <li class="media">
+                                        <div class="media-body">
+                                            Docs
+                                        </div>
+                                        </li>
+                                    </ul>
+                                    <div class="dropdown-content-footer">
+                                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Manage
+                                </a>
+                                <div class="dropdown-menu dropdown-content">
+                                    <ul class="media-list dropdown-content-body width-350">
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Apps
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Beacons
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Company
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Docs
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Mailbox
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Tags
+                                            </div>
+                                        </li>
+                                        <li class="media">
+                                            <div class="media-body">
+                                                Users
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="dropdown-content-footer">
+                                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                            <div class="navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown dropdown-user">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="assets/images/demo/users/face11.jpg" alt="" />
+                                    <span>Victoria</span>
+                                    <i class="caret"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /main navbar -->
+
+                    <!-- Page container -->
+                    <div class="page-container">
+                        <!-- Page content -->
+                        <div class="page-content">
+                            <!-- Main sidebar -->
+                
+                            <!-- /main sidebar -->
+
+                            <!-- Main content -->
+                            <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <!-- Detailed task -->
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <!-- Task details -->
+                                        <div class="panel panel-flat">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">Desarrollo</h6>
+                                        </div>
+                                        <table class="table table-borderless table-xs content-group-sm">
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="icon-envelope position-left"></i> Unassigred</td>
+                                                    <td class="text-right"><span class="pull-right"><a href="#">(1)</a></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-add position-left"></i> Mine</td>
+                                                    <td class="text-right">(0)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-check position-left"></i> Closed</td>
+                                                    <td class="text-right">(0)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-circles2 position-left"></i> Spam(0)</td>
+                                                    <td class="text-right">
+                                                    (0)
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer">
+                                            <ul class="pull-left">
+                                                <li><a href="#"><i class="icon-statistics"></i></a></li>
+                                            </ul>
+                                            <ul class="pull-right">
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#">Edit Mailbox</a></li>
+                                                    <li><a href="#">Connection String</a></li>
+                                                    <li><a href="#">Mailbox Permissions</a></li>
+                                                    <li><a href="#">Auto Reply</a></li>
+                                                    <li><a href="#">Saved Replies</a></li>
+                                                    <li><a href="#">Work Flows</a></li>
+                                                    <li><a href="#">Satisfaction Ratinge</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </div>
+                                        <!-- /task details -->
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- Task overview -->
+                                        <div class="panel panel-flat">
+                                        <div class="panel-footer" style="border-bottom:1px solid #DDD">
+                                            <ul>
+                                                <li><a href="#"><i class="icon-reply"></i></a></li>
+                                                <li><a href="#"><i class="icon-pencil"></i></a></li>
+                                                <li><a href="#"><i class="icon-user"></i></a></li>
+                                                <li><a href="#"><i class="icon-flag8"></i></a></li>
+                                                <li><a href="#"><i class="icon-price-tag3"></i></a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu"></i></a>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#"> Delete</a></li>
+                                                    <li><a href="#">Follow</a></li>
+                                                    <li><a href="#">Forward</a></li>
+                                                    <li><a href="#">Toggle Docs Search</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="pull-right">
+                                                <li><a href="#"><i class="icon-arrow-left12"></i></a></li>
+                                                <li><a href="#"><i class="icon-arrow-right13"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel-heading mt-5" style="border-bottom:1px solid #DDD">
+                                            <h5 class="panel-title">A few more basics
+                                            </h5>
+                                            <div class="heading-elements">
+                                                <p class="navbar-text">
+                                                    #2 <span class="label bg-success">ACTIVE</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <h6 class="text-semibold">Help Scout replied</h6>
+                                            <div class="heading-elements">
+                                                <ul class="icons-list">
+                                                    <li class="dropdown">
+                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
+                                                    <time><abbr>Dec 8,  8:56pm</abbr></time>
+                                                    <i class="icon-more2"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-content">
+                                                        <ul class="media-list dropdown-content-body width-150">
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                Edit
+                                                                </div>
+                                                            </li>
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                Hide
+                                                                </div>
+                                                            </li>
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                New Convertion
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="content-group">
+                                                Did you know Help Scout can also keep track of voicemails and phone calls? Check out the Voicemail App for a list of supported voicemail providers.
+                                                <br/>
+                                                You can log a new phone call by creating a new conversation and selecting the phone icon as the type. Anything you log as a phone call is added as a note to the conversation. 
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="panel panel-flat border-left-warning">
+                                        <div class="panel-body">
+                                            <h6 class="text-semibold">you added a note</h6>
+                                            <div class="heading-elements">
+                                                <ul class="icons-list">
+                                                    <li class="dropdown">
+                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
+                                                    <time><abbr>Dec 8,  8:56pm</abbr></time>
+                                                    <i class="icon-more2"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-content">
+                                                        <ul class="media-list dropdown-content-body width-150">
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                Edit
+                                                                </div>
+                                                            </li>
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                Hide
+                                                                </div>
+                                                            </li>
+                                                            <li class="media">
+                                                                <div class="media-body">
+                                                                New Conversation
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="content-group">
+                                                Did you know Help Scout can also keep track of voicemails and phone calls? Check out the Voicemail App for a list of supported voicemail providers.
+                                                <br/>
+                                                You can log a new phone call by creating a new conversation and selecting the phone icon as the type. Anything you log as a phone call is added as a note to the conversation. 
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <!-- /task overview -->
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!-- Latest comments -->
+                                        <div class="panel panel-flat">
+                                        <table width="100%">
+                                            <tr>
+                                                <td align="center"><img src="https://pbs.twimg.com/profile_images/775739139631124480/nHLTDDyb.jpg" width="70px" class="img-square" alt="" /></td>
+                                            </tr>
+                                        </table>
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <strong>Help Scout</strong>
+                                            </h6>
+                                            <br/>
+                                            <spam>Boston, MA</spam>
+                                        </div>
+                                        <table class="table table-borderless table-xs content-group-sm">
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="icon-envelope position-left"></i> help@helpscout.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-add position-left"></i> 855-435-7726</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-check position-left"></i> developer.helpscout.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-check position-left"></i> status.helpscout.net/</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-check position-left"></i> helpscout.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="icon-alarm-check position-left"></i> helpscout.net</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr />
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <strong>Previous Conversations</strong>
+                                            </h6>
+                                        </div>
+                                        <table class="table table-borderless table-xs content-group-sm">
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="icon-envelope position-left"></i> Learning the basics</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /detailed task -->
+                                <!-- Footer -->
+                                <div class="footer text-muted">
+                                    2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+                                </div>
+                                <!-- /footer -->
+                            </div>
+                            <!-- /content area -->
+                            </div>
+                            <!-- /main content -->
+                        </div>
+                        <!-- /page content -->
+                    </div>
+                    <!-- /page container -->
+                </body>
+            </html>
+        </template>
+
     </data>
 </odoo>
