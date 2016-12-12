@@ -5,13 +5,11 @@
         <record id="stage_active" model="project.task.type">
             <field name="name">Active</field>
             <field name="sequence">0</field>
-            <field name="project_ids" eval="[(6, 0, [ref('gpsi_crm.project_certification_sales_opportunities')])]"/>
         </record>
 
         <record id="stage_pending" model="project.task.type">
             <field name="name">Pending</field>
             <field name="sequence">1</field>
-            <field name="project_ids" eval="[(6, 0, [ref('gpsi_crm.project_certification_sales_opportunities')])]"/>
         </record>
 
         <record id="stage_closed" model="project.task.type">

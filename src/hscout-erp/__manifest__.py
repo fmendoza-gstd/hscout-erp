@@ -8,7 +8,10 @@
     'description': '',
     'website': '',
     'depends': ['project', 'website'],
-    'data': [],
+    'data': [
+        'data/hscout-data.xml',
+        'views/hscout-views.xml'
+    ],
     'test': [],
     'installable': True,
     'auto_install': False,
