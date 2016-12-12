@@ -13,9 +13,9 @@ class SocialNetwork(models.Model):
 class Customer(models.Model):
     _inherit = 'res.partner'
 
-    first_name = fields.Char('First Name')
-    last_name = fields.Char('Last Name')
-    social_network_ids = fields.One2many('hscout.customer.social.network', 'customer_id', 'Social Networks')
+    hs_first_name = fields.Char('First Name')
+    hs_last_name = fields.Char('Last Name')
+    hs_social_network_ids = fields.One2many('hscout.customer.social.network', 'customer_id', 'Social Networks')
 
 
 class CustomerSocialNetwork(models.Model):
@@ -23,6 +23,6 @@ class CustomerSocialNetwork(models.Model):
     _description = 'Customer Social Network'
 
     customer_id = fields.Many2one('res.partner', 'Customer')
-    type = fields.Many2one('hscout.social.network', 'Type')
+    type_id = fields.Many2one('hscout.social.network', 'Type')
     url = fields.Char('URL')
     
