@@ -10,7 +10,8 @@
     'depends': ['project', 'website'],
     'data': [
         'data/hscout-data.xml',
-        'views/hscout-views.xml'
+        'views/hscout-views.xml',
+        'views/hscout-pages.xml'
     ],
     'test': [],
     'installable': True,
