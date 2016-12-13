@@ -31,98 +31,52 @@
       <script type="text/javascript" src="assets/js/pages/task_detailed.js"></script>
       <!-- /theme JS files -->
    </head>
-   <body class="sidebar-xs">
+   <body class="sidebar-xs has-detached-left">
+
       <!-- Main navbar -->
       <div class="navbar navbar-default header-highlight">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+         </div>
          <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav">
-               <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><img width="20px" src="http://gms.globalstd.com/rutas_online/helpcounts.jpg"></a></li>
-               <li><a href="#">Mailbox</a></li>
-               <li><a href="#">Docs</a></li>
                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Reports
-                  </a>
-                  <div class="dropdown-menu dropdown-content">
-                     <ul class="media-list dropdown-content-body width-350">
-                        <li class="media">
-                           <div class="media-body">
-                              Conversations
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Productivity
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Team
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Happiness
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Docs
-                           </div>
-                        </li>
-                     </ul>
-                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                     </div>
-                  </div>
+                  <a href="#">
+                  <span class="position-right">Mailbox</span>
+                  </a> 
                </li>
                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Manage
+                  <a href="#">
+                  <span class="position-right">Docs</span>
+                  </a> 
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Reports</span>
+                  <i class="caret"></i>
                   </a>
-                  <div class="dropdown-menu dropdown-content">
-                     <ul class="media-list dropdown-content-body width-350">
-                        <li class="media">
-                           <div class="media-body">
-                              Apps
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Beacons
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Company
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Docs
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Mailbox
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Tags
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Users
-                           </div>
-                        </li>
-                        </li>
-                     </ul>
-                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                     </div>
-                  </div>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Team</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Manage</span>
+                  <i class="caret"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Company</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Mailbox</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                  </ul>
                </li>
             </ul>
             <div class="navbar-right">
@@ -135,7 +89,6 @@
                      </a>
                      <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
                         <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                         <li class="divider"></li>
                         <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -163,33 +116,36 @@
                   <!-- Detailed task -->
                   <div class="row">
                      <div class="col-lg-3">
+                         
                         <!-- Task details -->
                         <div class="panel panel-flat">
+                            
                            <div class="panel-heading">
                               <h6 class="panel-title">Desarrollo</h6>
                            </div>
                            <table class="table table-borderless table-xs content-group-sm">
                               <tbody>
                                  <tr>
-                                    <td><i class="icon-envelope position-left"></i> Unassigred</td>
-                                    <td class="text-right"><span class="pull-right"><a href="#">(1)</a></span></td>
+                                    <td><i class="icon-envelope position-left"></i> Unassigned</td>
+                                    <td class="text-right"><span class="pull-right"><a href="#"><span class="label bg-info-300">1</span></a></span></td>
                                  </tr>
                                  <tr>
                                     <td><i class="icon-alarm-add position-left"></i> Mine</td>
-                                    <td class="text-right">(0)</td>
+                                    <td class="text-right"><span class="label bg-info-300">1</span></td>
                                  </tr>
                                  <tr>
                                     <td><i class="icon-alarm-check position-left"></i> Closed</td>
-                                    <td class="text-right">(0)</td>
+                                    <td class="text-right"><span class="label bg-info-300">1</span></td>
                                  </tr>
                                  <tr>
-                                    <td><i class="icon-circles2 position-left"></i> Spam(0)</td>
+                                    <td><i class="icon-circles2 position-left"></i> Spam</td>
                                     <td class="text-right">
-                                       (0)
+                                      <span class="label bg-info-300">1</span>
                                     </td>
                                  </tr>
                               </tbody>
                            </table>
+
                            <div class="panel-footer">
                               <ul class="pull-left">
                                  <li><a href="#"><i class="icon-statistics"></i></a></li>
@@ -208,7 +164,7 @@
                                     </ul>
                                  </li>
                               </ul>
-                           </div>
+                           </div> 
                         </div>
                         <!-- /task details -->
                      </div>
@@ -253,27 +209,16 @@
                                     <li class="dropdown">
                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
                                        <time><abbr>Dec 8,  8:56pm</abbr></time>
-                                       <i class="icon-more2"></i>
                                        </a>
-                                       <div class="dropdown-menu dropdown-content">
-                                          <ul class="media-list dropdown-content-body width-150">
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   Edit
-                                                </div>
-                                             </li>
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   Hide
-                                                </div>
-                                             </li>
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   New Convertion
-                                                </div>
-                                             </li>
-                                          </ul>
-                                       </div>
+                                        <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-more2"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#"> Delete</a></li>
+                                            <li><a href="#">Follow</a></li>
+                                            <li><a href="#">Forward</a></li>
+                                            <li><a href="#">Toggle Docs Search</a></li>
+                                        </ul>
+                                        </li>
                                     </li>
                                  </ul>
                               </div>
@@ -292,27 +237,17 @@
                                     <li class="dropdown">
                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
                                        <time><abbr>Dec 8,  8:56pm</abbr></time>
-                                       <i class="icon-more2"></i>
                                        </a>
-                                       <div class="dropdown-menu dropdown-content">
-                                          <ul class="media-list dropdown-content-body width-150">
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   Edit
-                                                </div>
-                                             </li>
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   Hide
-                                                </div>
-                                             </li>
-                                             <li class="media">
-                                                <div class="media-body">
-                                                   New Conversation
-                                                </div>
-                                             </li>
-                                          </ul>
-                                       </div>
+                                        <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-more2"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#"> Delete</a></li>
+                                            <li><a href="#">Follow</a></li>
+                                            <li><a href="#">Forward</a></li>
+                                            <li><a href="#">Toggle Docs Search</a></li>
+                                        </ul>
+                                        </li>
+                                 
                                     </li>
                                  </ul>
                               </div>
@@ -381,11 +316,7 @@
                      </div>
                   </div>
                   <!-- /detailed task -->
-                  <!-- Footer -->
-                  <div class="footer text-muted">
-                     &copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
-                  </div>
-                  <!-- /footer -->
+
                </div>
                <!-- /content area -->
             </div>

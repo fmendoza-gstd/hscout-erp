@@ -1,265 +1,188 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:46 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
-
-	<!-- Global stylesheets -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
-	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
-	<!-- /global stylesheets -->
-
-	<!-- Core JS files -->
-	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
-	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
-	<!-- /core JS files -->
-
-	<!-- Theme JS files -->
-	<script type="text/javascript" src="assets/js/core/libraries/jquery_ui/widgets.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/tables/datatables/extensions/natural_sort.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
-
-	<script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/datatables_basic.js"></script>
-	<!-- /theme JS files -->
-
-</head>
-
-<body class="sidebar-xs">
-
-	<!-- Main navbar -->
-	<div class="navbar navbar-default header-highlight">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
-		</div>
-
-		<div class="navbar-collapse collapse" id="navbar-mobile">
-
-			<ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#">
-						<span class="position-right">Mailbox</span>
-					</a>
-				</li>
-			</ul>
-
+   <!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:46 GMT -->
+   <!-- Added by HTTrack -->
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <!-- /Added by HTTrack -->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+      <!-- Global stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+      <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+      <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+      <!-- /global stylesheets -->
+      <!-- Core JS files -->
+      <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+      <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+      <!-- /core JS files -->
+      <!-- Theme JS files -->
+      <script type="text/javascript" src="assets/js/core/libraries/jquery_ui/widgets.min.js"></script>
+      <script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
+      <script type="text/javascript" src="assets/js/plugins/tables/datatables/extensions/natural_sort.js"></script>
+      <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+      <script type="text/javascript" src="assets/js/core/app.js"></script>
+      <script type="text/javascript" src="assets/js/pages/datatables_basic.js"></script>
+      <!-- /theme JS files -->
+   </head>
+   <body class="sidebar-xs">
+      <!-- Main navbar -->
+      <div class="navbar navbar-default header-highlight">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+         </div>
+         <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#">
-						<span class="position-right">Docs</span>
-					</a>
-				</li>
-			</ul>
-
-            <ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="position-right">Reports</span>
-						<i class="icon-arrow-down12"></i>
-					</a>
-					
-					<div class="dropdown-menu dropdown-content">
-
-						<ul class="media-list dropdown-content-body width-150">
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-bubbles9"></i> Conversations</a>
-								</div>
-							</li>
-
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-stats-growth2"></i> Productivity</a>
-								</div>
-							</li>
-
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-users4"></i> Team</a>
-								</div>
-							</li>
-
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-thumbs-up2"></i> Happiness</a>
-								</div>
-							</li>
-
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-files-empty"></i> Docs</a>
-								</div>
-							</li>
-						</ul>
-
-						<div class="dropdown-content-footer">
-						</div>
-					</div>
-				</li>
-			</ul>
-
-            <ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="position-right">Manage</span>
-						<i class="icon-arrow-down12"></i>
-					</a>
-					
-					<div class="dropdown-menu dropdown-content">
-
-						<ul class="media-list dropdown-content-body width-150">
-							<li class="media">
-								<div class="media-left">
-									<a href="#" class="btn text-primary btn-sm"><i class="icon-price-tag2"></i> Tags</a>
-								</div>
-							</li>
-						</ul>
-
-						<div class="dropdown-content-footer">
-						</div>
-					</div>
-				</li>
-			</ul>
-
-			<div class="navbar-right">
-				<ul class="nav navbar-nav">
-
-					<li class="dropdown dropdown-user">
-						<a class="dropdown-toggle" data-toggle="dropdown">
-							<img src="assets/images/demo/users/face11.jpg" alt="">
-							<span>Victoria</span>
-							<i class="caret"></i>
-						</a>
-
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-							<li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-							<li class="divider"></li>
-							<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-							<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-						</ul>
-					</li>
-
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- /main navbar -->
-
-
-	<!-- Page container -->
-	<div class="page-container">
-
-		<!-- Page content -->
-		<div class="page-content">
-
-			<!-- Main content -->
-			<div class="content-wrapper">
-
-				<!-- Content area -->
-				<div class="content">
-
-                    <!-- User panel -->
-                    <div class="panel panel-white">
-                        <div class="panel-heading">
-                            <h6 class="panel-title">Mailboxes</h6>
-                            <div class="heading-elements">
-                                <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New Mailbox</button>
-                            </div>
+               <li class="dropdown">
+                  <a href="#">
+                  <span class="position-right">Mailbox</span>
+                  </a> 
+               </li>
+               <li class="dropdown">
+                  <a href="#">
+                  <span class="position-right">Docs</span>
+                  </a> 
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Reports</span>
+                  <i class="caret"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Team</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Manage</span>
+                  <i class="caret"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Company</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Mailbox</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                  </ul>
+               </li>
+            </ul>
+            <div class="navbar-right">
+               <ul class="nav navbar-nav">
+                  <li class="dropdown dropdown-user">
+                     <a class="dropdown-toggle" data-toggle="dropdown">
+                     <img src="assets/images/demo/users/face11.jpg" alt="">
+                     <span>Victoria</span>
+                     <i class="caret"></i>
+                     </a>
+                     <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- /main navbar -->
+      <!-- Page container -->
+      <div class="page-container">
+         <!-- Page content -->
+         <div class="page-content">
+            <!-- Main content -->
+            <div class="content-wrapper">
+               <!-- Content area -->
+               <div class="content">
+                  <!-- User panel -->
+                  <div class="panel panel-white">
+                     <div class="panel-heading">
+                        <h6 class="panel-title">Mailboxes</h6>
+                        <div class="heading-elements">
+                           <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New Mailbox</button>
                         </div>
-                    </div>
-                    <!-- /user panel -->
-
-                    <!-- Horizontal icons -->
-					<div class="row">
-                        <div class="col-lg-3 col-md-6">
-							<div class="panel panel-body">
-								<div class="media">
-									<div class="media-body">
-										<h6 class="media-heading">Desarrollo</h6>
-										<p class="text-muted">desarrollo@globalstd.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-                        <div class="col-lg-3 col-md-6">
-							<div class="panel panel-body">
-								<div class="media">
-									<div class="media-body">
-										<h6 class="media-heading">Ejemplo1</h6>
-										<p class="text-muted">ejemplo1@globalstd.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-                        <div class="col-lg-3 col-md-6">
-							<div class="panel panel-body">
-								<div class="media">
-									<div class="media-body">
-										<h6 class="media-heading">Ejemplo2</h6>
-										<p class="text-muted">ejemplo2@globalstd.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-                        <div class="col-lg-3 col-md-6">
-							<div class="panel panel-body">
-								<div class="media">
-									<div class="media-body">
-										<h6 class="media-heading">Ejemplo3</h6>
-										<p class="text-muted">ejemplo3@globalstd.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-                        <div class="col-lg-3 col-md-6">
-							<div class="panel panel-body">
-								<div class="media">
-									<div class="media-body">
-										<h6 class="media-heading">Ejemplo4</h6>
-										<p class="text-muted">ejemplo4@globalstd.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /horizontal icons -->
-
-					<!-- Footer -->
-					<div class="footer text-muted">
-						&copy; 2016. <a href="#">GlobalSTD Scout</a> by <a href="http://www.globalstd.com" target="_blank">GlobalSTD Software</a>
-					</div>
-					<!-- /footer -->
-
-				</div>
-				<!-- /content area -->
-
-			</div>
-			<!-- /main content -->
-
-		</div>
-		<!-- /page content -->
-
-	</div>
-	<!-- /page container -->
-
-</body>
-
-<!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:47 GMT -->
+                     </div>
+                  </div>
+                  <!-- /user panel -->
+                  <!-- Horizontal icons -->
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-body">
+                           <div class="media">
+                              <div class="media-body">
+                                 <h6 class="media-heading">Desarrollo</h6>
+                                 <p class="text-muted">desarrollo@globalstd.com</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-body">
+                           <div class="media">
+                              <div class="media-body">
+                                 <h6 class="media-heading">Ejemplo1</h6>
+                                 <p class="text-muted">ejemplo1@globalstd.com</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-body">
+                           <div class="media">
+                              <div class="media-body">
+                                 <h6 class="media-heading">Ejemplo2</h6>
+                                 <p class="text-muted">ejemplo2@globalstd.com</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-body">
+                           <div class="media">
+                              <div class="media-body">
+                                 <h6 class="media-heading">Ejemplo3</h6>
+                                 <p class="text-muted">ejemplo3@globalstd.com</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-body">
+                           <div class="media">
+                              <div class="media-body">
+                                 <h6 class="media-heading">Ejemplo4</h6>
+                                 <p class="text-muted">ejemplo4@globalstd.com</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /horizontal icons -->
+               </div>
+               <!-- /content area -->
+            </div>
+            <!-- /main content -->
+         </div>
+         <!-- /page content -->
+      </div>
+      <!-- /page container -->
+   </body>
+   <!-- Mirrored from demo.interface.club/limitless/layout_2/LTR/task_manager_list.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Mar 2016 02:39:47 GMT -->
 </html>
+

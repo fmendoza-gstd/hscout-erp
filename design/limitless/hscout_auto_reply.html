@@ -34,99 +34,51 @@
       <script type="text/javascript" src="assets/js/pages/form_checkboxes_radios.js"></script>
       <!-- /theme JS files -->
    </head>
-   <body>
-      <!-- Main navbar -->
+   <body class="sidebar-xs has-detached-left">
       <!-- Main navbar -->
       <div class="navbar navbar-default header-highlight">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+         </div>
          <div class="navbar-collapse collapse" id="navbar-mobile">
             <ul class="nav navbar-nav">
-               <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><img width="20px" src="http://gms.globalstd.com/rutas_online/helpcounts.jpg"></a></li>
-               <li><a href="#">Mailbox</a></li>
-               <li><a href="#">Docs</a></li>
                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Reports
-                  </a>
-                  <div class="dropdown-menu dropdown-content">
-                     <ul class="media-list dropdown-content-body width-350">
-                        <li class="media">
-                           <div class="media-body">
-                              Conversations
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Productivity
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Team
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Happiness
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Docs
-                           </div>
-                        </li>
-                     </ul>
-                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                     </div>
-                  </div>
+                  <a href="#">
+                  <span class="position-right">Mailbox</span>
+                  </a> 
                </li>
                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Manage
+                  <a href="#">
+                  <span class="position-right">Docs</span>
+                  </a> 
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Reports</span>
+                  <i class="caret"></i>
                   </a>
-                  <div class="dropdown-menu dropdown-content">
-                     <ul class="media-list dropdown-content-body width-350">
-                        <li class="media">
-                           <div class="media-body">
-                              Apps
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Beacons
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Company
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Docs
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Mailbox
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Tags
-                           </div>
-                        </li>
-                        <li class="media">
-                           <div class="media-body">
-                              Users
-                           </div>
-                        </li>
-                        </li>
-                     </ul>
-                     <div class="dropdown-content-footer">
-                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                     </div>
-                  </div>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Team</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
+                  </ul>
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <span>Manage</span>
+                  <i class="caret"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
+                     <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
+                     <li><a href="#"><i class="icon-users4"></i>Company</a></li>
+                     <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Mailbox</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
+                     <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                  </ul>
                </li>
             </ul>
             <div class="navbar-right">
@@ -139,7 +91,6 @@
                      </a>
                      <ul class="dropdown-menu dropdown-menu-right">
                         <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
                         <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                         <li class="divider"></li>
                         <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -151,7 +102,6 @@
          </div>
       </div>
       <!-- /main navbar -->
-      <!-- /main navbar -->
       <!-- Page container -->
       <div class="page-container">
       <!-- Page content -->
@@ -162,46 +112,42 @@
          <div class="content-wrapper">
             <!-- Content area -->
             <div class="content">
-               <div class="row">
-                  <div class="col-md-2">
-                     <div class="panel panel-flat">
-                        <div class="panel-heading">
-                           <h6 class="panel-title">Desarrollo</h6>
+               <!-- Detached sidebar -->
+               <div class="sidebar-detached">
+                  <div class="sidebar sidebar-default">
+                     <div class="sidebar-content">
+                        <!-- Sub navigation -->
+                        <div class="sidebar-category">
+                           <div class="category-title">
+                              <span>Desarrollo</span>
+                           </div>
+                           <div class="category-content no-padding">
+                              <ul class="navigation navigation-alt navigation-accordion">
+                                 <li><a href="#"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
+                                 <li><a href="#"><i class="icon-unlocked"></i> Connection Settings</a></li>
+                                 <li><a href="#"><i class="icon-bell2"></i> Permissions</a></li>
+                                 <li><a href="#"><i class="icon-users2"></i> Auto Reply</a></li>
+                                 <li><a href="#"><i class="icon-key"></i> Saved Replies</a></li>
+                                 <li><a href="#"><i class="icon-key"></i> Workflows</a></li>
+                                 <li><a href="#"><i class="icon-key"></i> Satisfaction Ratings</a></li>
+                              </ul>
+                           </div>
                         </div>
-                        <table class="table table-borderless table-xs content-group-sm">
-                           <tbody>
-                              <tr>
-                                 <td><i class="icon-home position-left"></i> Edit Mailbox</td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-folder position-left"></i> Connection Settings</td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-import position-left"></i> Permissions</td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-filter4 position-left"></i> Auto Replay</td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-office position-left"></i> Save Replies</td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-office position-left"></i>Workflows </td>
-                              </tr>
-                              <tr>
-                                 <td><i class="icon-office position-left"></i> Satisfaction Ratings</td>
-                              </tr>
-                           </tbody>
-                        </table>
+                        <!-- /sub navigation -->
                      </div>
                   </div>
-                  <div class="col-md-10">
-                     <div class="panel panel-flat">
+               </div>
+               <!-- /detached sidebar -->
+               <!-- Container sidebar -->
+               <div class="container-detached">
+                  <div class="content-detached">
+                     <!-- Edit mailbox -->
+                     <div class="panel panel-white">
                         <div class="panel-heading">
-                           <h5 class="panel-title">Auto Reply</h5>
-                           <a class="heading-elements-toggle"><i class="icon-menu"></i></a>
+                           <h6 class="panel-title">Auto Reply</h6>
                         </div>
                         <div class="panel-body">
+                           <form class="form-horizontal">
                            <form action="#" class="form-horizontal">
                               <fieldset class="content-group">
                                  <div class="form-group">
@@ -231,14 +177,17 @@
                                  </div>
                               </fieldset>
                               <div class="text-left">
-                                  <label class="control-label col-lg-2"></label>
-                                  <div class="col-lg-10"><button class="btn btn-primary" type="submit">Save</button></div>
+                                 <label class="control-label col-lg-2"></label>
+                                 <div class="col-lg-10"><button class="btn btn-primary" type="submit">Save</button></div>
                               </div>
+                           </form>
                            </form>
                         </div>
                      </div>
+                     <!-- /edit mailbox -->
                   </div>
                </div>
+               <!-- /container sidebar -->
                <!-- /content area -->
             </div>
             <!-- /main content -->
