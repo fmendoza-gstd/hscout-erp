@@ -17,5 +17,28 @@
                 </page>
             </field>
         </record>
+
+        <record id="company_view_form_inherit_hscout" model="ir.ui.view">
+            <field name="name">Help Scout – Company extension</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="page_hscout" string="Help Scout">
+                        <group string="Help Scout">
+                            <group>
+                                <field name="hs_time_zone" />
+                                <field name="hs_time_format" />
+                                <field name="hs_open_tracking" />
+                            </group>
+                            <group>
+                                <field name="hs_next_conversation" />
+                                <field name="hs_conversation_lock" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
