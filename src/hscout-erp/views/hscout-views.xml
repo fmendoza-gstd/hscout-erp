@@ -40,5 +40,31 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="project_view_form_inherit_hscout" model="ir.ui.view">
+            <field name="name">Help Scout – Project extension</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="page_hscout" string="Help Scout">
+                        <group string="Help Scout">
+                            <group>
+                                <field name="hs_is_helpdesk" />
+                                <field name="hs_from_name" />
+                            </group>
+                            <group>
+                                <field name="hs_default_status" />
+                                <field name="hs_email_template" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="hs_email_signature" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record> 
+
     </data>
 </odoo>
