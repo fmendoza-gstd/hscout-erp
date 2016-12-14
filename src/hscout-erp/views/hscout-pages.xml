@@ -1663,5 +1663,241 @@
             </html>
         </template>
 
+<template name="Company" id="website.company" page="True">
+        <html lang="en">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head"/>
+            <body class="sidebar-xs has-detached-left">
+                <!-- Main navbar -->
+                <div class="navbar navbar-default header-highlight">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""/></a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#">
+                            <span class="position-right">Mailbox</span>
+                            </a> 
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                            <span class="position-right">Docs</span>
+                            </a> 
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>Reports</span>
+                            <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                                <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
+                                <li><a href="#"><i class="icon-users4"></i>Team</a></li>
+                                <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>Manage</span>
+                            <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
+                                <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
+                                <li><a href="#"><i class="icon-users4"></i>Company</a></li>
+                                <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Mailbox</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown dropdown-user">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="assets/images/demo/users/face11.jpg" alt=""/>
+                                <span>Victoria</span>
+                                <i class="caret"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                                <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <!-- /main navbar -->
+                <!-- Page container -->
+                <div class="page-container">
+                <!-- Page content -->
+                <div class="page-content">
+                    <!-- Main sidebar -->
+                    <!-- /main sidebar -->
+                    <!-- Main content -->
+                    <div class="content-wrapper">
+                        <!-- Content area -->
+                        <div class="content">
+                        <!-- Detached sidebar -->
+                        <div class="sidebar-detached">
+                            <div class="sidebar sidebar-default">
+                                <div class="sidebar-content">
+                                    <!-- Sub navigation -->
+                                    <div class="sidebar-category">
+                                    <div class="category-title">
+                                        <span>Globalstd</span>
+                                    </div>
+                                    <div class="category-content no-padding">
+                                        <ul class="navigation navigation-alt navigation-accordion">
+                                            <li><a href="#"><i class="icon-user-tie"></i> Edit Company</a></li>
+                                            <li><a href="#"><i class="icon-unlocked"></i> Features</a></li>
+                                            <li><a href="#"><i class="icon-bell2"></i> Import Data</a></li>
+                                            <li><a href="#"><i class="icon-users2"></i> Spam Filtering</a></li>
+                                            <li><a href="#"><i class="icon-key"></i> Office Hours</a></li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    <!-- /sub navigation -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /detached sidebar -->
+                        <!-- Container sidebar -->
+                        <div class="container-detached">
+                            <div class="content-detached">
+                                <!-- Edit mailbox -->
+                                <div class="panel panel-white">
+                                    <div class="panel-heading">
+                                    <h6 class="panel-title">Edit Company</h6>
+                                    </div>
+                                    <div class="panel-body">
+                                    <form action="#" class="form-horizontal">
+                                        <fieldset class="content-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Company Name</label>
+                                                <div class="col-lg-4">
+                                                <input type="text" class="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Next Conversation#</label>
+                                                <div class="col-lg-4">
+                                                <input type="text" class="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">User Permissions</label>
+                                                <div class="col-lg-10">
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"/>
+                                                    Users are allowed to delete notes/conversations 
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"/>
+                                                    Users are allowed to edit notes/threads 
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"/>
+                                                    Users are allowed to edit/delete saved replies 
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"/>
+                                                    Users are allowed to manage tags 
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                    <input type="checkbox"/>
+                                                    Users are allowed to manage workflows 
+                                                    </label>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Open Tracking</label>
+                                                <div class="col-lg-10">
+                                                <div class="checkbox checkbox-switchery">
+                                                    <label>
+                                                    <input type="checkbox" class="switchery-primary" checked="checked"/>
+                                                    </label>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Conversation Lock</label>
+                                                <div class="col-lg-2">
+                                                <div class="input-group">
+                                                    <input type="text" placeholder="30" class="form-control"/>
+                                                    <span class="input-group-addon">days</span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Timezone</label>
+                                                <div class="col-lg-4">
+                                                <select class="form-control" name="select">
+                                                    <option value="opt1">(GMT-10:00) Hawaiian/Aleutian Time</option>
+                                                    <option value="opt2">Option 2</option>
+                                                    <option value="opt3">Option 3</option>
+                                                    <option value="opt4">Option 4</option>
+                                                    <option value="opt5">Option 5</option>
+                                                    <option value="opt6">Option 6</option>
+                                                    <option value="opt7">Option 7</option>
+                                                    <option value="opt8">Option 8</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Time Format</label>
+                                                <div class="col-lg-10">
+                                                <label class="radio-inline radio-right">
+                                                <input type="radio" name="radio-unstyled-inline-right" checked="checked"/>
+                                                12-hour clock (e.g. 2:13pm)
+                                                </label>
+                                                <label class="radio-inline radio-right">
+                                                <input type="radio" name="radio-unstyled-inline-right"/>
+                                                24-hour clock (e.g. 14:13)
+                                                </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-2"></label>
+                                            <div class="text-left">
+                                            <button class="btn btn-primary" type="submit">Save</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                    </div>
+                                </div>
+                                <!-- /edit mailbox -->
+                            </div>
+                        </div>
+                        <!-- /container sidebar -->
+                        </div>
+                        <!-- /main content -->
+                    </div>
+                    <!-- /page content -->
+                </div>
+                <!-- /page container -->
+                </div>
+            </body>
+        </html>
+        </template>
+
     </data>
 </odoo>
