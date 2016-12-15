@@ -630,15 +630,13 @@
                                                     </a>
                                                 </div>
                                                 <div class="media-body">
-                                 
                                                     <h6 class="media-heading">Israel Valdivia
-                                                                       <t t-foreach="customer" t-as="customisito">
-                                                        <p>
-                                                            <t t-esc="customisito.id" />
-                                                            <t t-esc="customisito.name" />
-                                                        </p>
-                                                    </t>
-                                                    
+                                                        <t t-foreach="customer" t-as="customisito">
+                                                            <p>
+                                                                <t t-esc="customisito.id" />
+                                                                <t t-esc="customisito.name" />
+                                                            </p>
+                                                        </t>
                                                     </h6>
                                                     <p class="text-muted">User</p>
                                                 </div>
@@ -1113,6 +1111,8 @@
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
+            <t t-set="rid" t-value="request.uid" />
+            <t t-set="obj" t-value="request.env['res.users'].sudo().search([('id','=',rid)])" />
 
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
@@ -1166,7 +1166,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Company Name</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control" />
+                                                                <input type="text" class="form-control" t-attf-value="{{obj and obj.company_id.name}}" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
