@@ -713,7 +713,6 @@
 
             </html>
         </template>
-<<<<<<< HEAD
 
         <!-- === Users === -->
         <template name="Users" id="website.users" page="True">
@@ -729,7 +728,7 @@
                         <div class="navbar-collapse collapse" id="navbar-mobile">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#">
+                                    <a href="/settings/company">
                                         <span class="position-right">Mailbox</span>
                                     </a>
                                 </li>
@@ -776,7 +775,7 @@
                                             <i class="caret"></i>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                            <li><a href="/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
                                             <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -785,130 +784,26 @@
                                     </li>
                                 </ul>
                             </div>
-=======
-        <template name="Users" id="website.users" page="True">
-            <html lang="en">
-            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-            <t t-call="hscout-erp.layout_head" />
-
-            <body class="sidebar-xs">
-                <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt="" /></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="/settings/company">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="position-right">Reports</span>
-                                    <i class="icon-arrow-down12"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-content">
-                                    <ul class="media-list dropdown-content-body width-150">
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-bubbles9"></i> Conversations</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-stats-growth2"></i> Productivity</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-users4"></i> Team</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-thumbs-up2"></i> Happiness</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-files-empty"></i> Docs</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="dropdown-content-footer">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="position-right">Manage</span>
-                                    <i class="icon-arrow-down12"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-content">
-                                    <ul class="media-list dropdown-content-body width-150">
-                                        <li class="media">
-                                            <div class="media-left">
-                                                <a href="#" class="btn text-primary btn-sm"><i class="icon-price-tag2"></i> Tags</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="dropdown-content-footer">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                         </div>
                     </div>
-                </div>
-                <!-- /main navbar -->
-                <!-- Page container -->
-                <div class="page-container">
-                    <!-- Page content -->
-                    <div class="page-content">
-                        <!-- Main content -->
-                        <div class="content-wrapper">
-                            <!-- Content area -->
-                            <div class="content">
-                                <!-- User panel -->
-                                <div class="panel panel-white">
-                                    <div class="panel-heading">
-                                        <h6 class="panel-title">Users</h6>
-                                        <div class="heading-elements">
-                                            <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New User</button>
+                    <!-- /main navbar -->
+                    <!-- Page container -->
+                    <div class="page-container">
+                        <!-- Page content -->
+                        <div class="page-content">
+                            <!-- Main content -->
+                            <div class="content-wrapper">
+                                <!-- Content area -->
+                                <div class="content">
+                                    <!-- User panel -->
+                                    <div class="panel panel-white">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">Users</h6>
+                                            <div class="heading-elements">
+                                                <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New User</button>
+                                            </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
                                     <!-- /user panel -->
                                     <!-- Horizontal icons -->
                                     <div class="row">
@@ -1029,142 +924,9 @@
                                                         <h6 class="media-heading">Barbara Walden</h6>
                                                         <p class="text-muted">SEO specialist</p>
                                                     </div>
-=======
-                                </div>
-                                <!-- /user panel -->
-                                <!-- Horizontal icons -->
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Israel Valdivia</h6>
-                                                    <p class="text-muted">User</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Francisco Mendoza</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Eduardo Vazquez</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Gabriel Vazquez</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">James Alexander</h6>
-                                                    <p class="text-muted">Lead developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Nathan Jacobson</h6>
-                                                    <p class="text-muted">Lead UX designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Margo Baker</h6>
-                                                    <p class="text-muted">Sales manager</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Barbara Walden</h6>
-                                                    <p class="text-muted">SEO specialist</p>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-<<<<<<< HEAD
-                                    <div class="row">
                                         <div class="col-lg-3 col-md-6">
                                             <div class="panel panel-body">
                                                 <div class="media">
@@ -1222,92 +984,26 @@
                                                         <h6 class="media-heading">William Brenson</h6>
                                                         <p class="text-muted">Chief officer</p>
                                                     </div>
-=======
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /horizontal icons -->
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Hanna Dorman</h6>
-                                                    <p class="text-muted">UX/UI designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Benjamin Loretti</h6>
-                                                    <p class="text-muted">Network engineer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Vanessa Aurelius</h6>
-                                                    <p class="text-muted">Front end guru</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="https://s-media-cache-ak0.pinimg.com/originals/d2/02/1b/d2021b4ca3ceabafbfdf9a7a6b44cbd3.jpg" style="width: 70px; height: 70px;"
-                                                            class="img-circle" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">William Brenson</h6>
-                                                    <p class="text-muted">Chief officer</p>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /horizontal icons -->
+                                <!-- /content area -->
                             </div>
-                            <!-- /content area -->
+                            <!-- /main content -->
                         </div>
-                        <!-- /main content -->
+                        <!-- /page content -->
                     </div>
-                    <!-- /page content -->
-                </div>
-                <!-- /page container -->
-            </body>
+                    <!-- /page container -->
+                </body>
 
             </html>
         </template>
-<<<<<<< HEAD
 
         <!-- === Spam === -->
-        <template name="Spam settings" id="website.spam_settings" page="True">
+        <template name="Spam settings" id="website.settings/spam" page="True">
             <html lang="en">
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
                 <t t-call="hscout-erp.layout_head"/>
@@ -1350,9 +1046,9 @@
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
                                         <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                        <li><a href="#"><i class="icon-office"></i>Company</a></li>
+                                        <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
                                         <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                        <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
+                                        <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
                                         <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
                                         <li><a href="#"><i class="icon-users"></i> Users</a></li>
                                     </ul>
@@ -1367,7 +1063,7 @@
                                             <i class="caret"></i>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                            <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
                                             <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -1429,184 +1125,6 @@
                                                                 <div class="col-lg-4">
                                                                     <textarea type="text" rows="5" class="form-control"></textarea>
                                                                 </div>
-=======
-        <template name="Spam settings" id="website.settings/spam" page="True">
-            <html lang="en">
-            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-            <t t-call="hscout-erp.layout_head" />
-
-            <body>
-                <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a class="sidebar-control sidebar-main-toggle hidden-xs"><img width="20px" src="http://gms.globalstd.com/rutas_online/helpcounts.jpg" /></a>
-                            </li>
-                            <li><a href="#">Mailbox</a></li>
-                            <li><a href="#">Docs</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Reports
-                                    </a>
-                                <div class="dropdown-menu dropdown-content">
-                                    <ul class="media-list dropdown-content-body width-350">
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Conversations
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Productivity
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Team
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Happiness
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Docs
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="dropdown-content-footer">
-                                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Manage
-                                    </a>
-                                <div class="dropdown-menu dropdown-content">
-                                    <ul class="media-list dropdown-content-body width-350">
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Apps
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Beacons
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                <a href="/page/settings/company">Company</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Docs
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                <a href="/page/settings/mailboxes">Mailbox</a>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Tags
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <div class="media-body">
-                                                Users
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="dropdown-content-footer">
-                                        <a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- /main navbar -->
-                <!-- /main navbar -->
-                <!-- Page container -->
-                <div class="page-container">
-                    <!-- Page content -->
-                    <div class="page-content">
-                        <!-- Main sidebar -->
-                        <!-- /main sidebar -->
-                        <!-- Main content -->
-                        <div class="content-wrapper">
-                            <!-- Content area -->
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="panel panel-flat">
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title">Globalstd</h6>
-                                            </div>
-                                            <table class="table table-borderless table-xs content-group-sm">
-                                                <tbody>
-                                                    <tr>
-                                                        <td><i class="icon-home position-left"></i> Edit Company</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-folder position-left"></i> Features</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-import position-left"></i> Import Data</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-filter4 position-left"></i> Spam Filtering</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-office position-left"></i> Office Hours</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="panel panel-flat">
-                                            <div class="panel-heading">
-                                                <h5 class="panel-title">Spam Settings</h5>
-                                                <hr/>
-                                                <small>Data in the spam whitelist/blacklist can be separated by comma, line or semi-colon.<br/>
-                                                    You can include a full email address, a domain or an IP address. Read more in this article.
-                                                </small>
-                                            </div>
-                                            <div class="panel-body">
-                                                <form action="#" class="form-horizontal">
-                                                    <fieldset class="content-group">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2">Whitelist</label>
-                                                            <div class="col-lg-4">
-                                                                <textarea type="text" rows="5" class="form-control"></textarea>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="control-label col-lg-2 text-right">Blacklist</label>
@@ -1616,7 +1134,6 @@
                                                             </div>
                                                         </fieldset>
                                                         <div class="form-group">
-<<<<<<< HEAD
                                                             <label class="control-label col-lg-2 text-right"></label>
                                                             <div class="text-left">
                                                                 <button class="btn btn-primary" type="submit">Save</button>
@@ -1624,40 +1141,23 @@
                                                         </div>
                                                     </form>
                                                 </div>
-=======
-                                                            <label class="control-label col-lg-2">Blacklist</label>
-                                                            <div class="col-lg-4">
-                                                                <textarea type="text" rows="5" class="form-control"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-                                                    <div class="text-left">
-                                                        <label class="control-label col-lg-2"></label>
-                                                        <div class="col-lg-10">
-                                                            <button class="btn btn-primary" type="submit">Save</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                             </div>
                                             <!-- /edit mailbox -->
                                         </div>
                                     </div>
                                     <!-- /container sidebar -->
                                 </div>
+                                <!-- /content area -->
                             </div>
-                            <!-- /content area -->
+                            <!-- /main content -->
                         </div>
-                        <!-- /main content -->
+                        <!-- /page content -->
                     </div>
-                    <!-- /page content -->
-                </div>
-                <!-- /page container -->
-            </body>
+                    <!-- /page container -->
+                </body>
 
             </html>
         </template>
-<<<<<<< HEAD
 
         <!-- === Profile === -->
         <template name="Profile" id="website.profile" page="True">
@@ -1703,9 +1203,9 @@
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
                                         <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                        <li><a href="#"><i class="icon-office"></i>Company</a></li>
+                                        <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
                                         <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                        <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
+                                        <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
                                         <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
                                         <li><a href="#"><i class="icon-users"></i> Users</a></li>
                                     </ul>
@@ -1720,7 +1220,7 @@
                                             <i class="caret"></i>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                            <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
                                             <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -1751,7 +1251,7 @@
                                                     </div>
                                                     <div class="category-content no-padding">
                                                         <ul class="navigation navigation-alt navigation-accordion">
-                                                            <li><a href="#"><i class="icon-user-tie"></i> Profile</a></li>
+                                                            <li><a href="/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
                                                             <li><a href="#"><i class="icon-unlocked"></i> Permissions</a></li>
                                                             <li><a href="#"><i class="icon-bell2"></i> Notifications</a></li>
                                                             <li><a href="#"><i class="icon-users2"></i> Auto Bcc</a></li>
@@ -1760,8 +1260,151 @@
                                                     </div>
                                                 </div>
                                                 <!-- /sub navigation -->
-=======
-        <template name="Profile" id="website.users/profile" page="True">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /detached sidebar -->
+                                    <!-- Container sidebar -->
+                                    <div class="container-detached">
+                                        <div class="content-detached">
+                                            <!-- Edit mailbox -->
+                                            <div class="panel panel-white">
+                                                <div class="panel-heading">
+                                                    <h6 class="panel-title">Profile</h6>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Role</label>
+                                                            <div class="col-lg-4">
+                                                                <select name="select" class="form-control" disabled="disabled">
+                                                                    <option value="1">Account Owner</option>
+                                                                    <option value="2">Option 2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Name</label>
+                                                            <div class="col-lg-2">
+                                                                <input type="text" class="form-control" placeholder="Name" />
+                                                            </div>
+                                                            <div class="col-lg-2">
+                                                                <input type="text" class="form-control" placeholder="Last Name" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Email</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" placeholder="Main Email" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Billing Email</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="margin-top:-15px;">
+                                                            <label class="control-label col-lg-2 text-right"></label>
+                                                            <div class="col-lg-4">
+                                                                <label class="text-muted">Receipts will be sent this email address</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Alternate Email</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" placeholder="(Optional)" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Password</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="password" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Confirm Password</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="password" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Job Title</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" placeholder="(Optional)" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Phone Number</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" placeholder="(Optional)" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Timezone</label>
+                                                            <div class="col-lg-4">
+                                                                <select name="select" class="form-control">
+                                                                        <option value="1">(GMT+00:00) UTC</option>
+                                                                        <option value="2">Option 2</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Time Format</label>
+                                                            <div class="col-lg-10">
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="time_format" class="styled" checked="checked"/>
+                                                                        12-hour clock
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="time_format" class="styled"/>
+                                                                        24-hour clock
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Photo</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="file" class="file-styled" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" style="margin-top:-15px;">
+                                                            <label class="control-label col-lg-2 text-right"></label>
+                                                            <div class="col-lg-4">
+                                                                <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="col-lg-2"></div>
+                                                                <div class="col-lg-10">
+                                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- /edit mailbox -->
+                                        </div>
+                                    </div>
+                                    <!-- /container sidebar -->
+                                </div>
+                                <!-- /content area -->
+                            </div>
+                            <!-- /main content -->
+                        </div>
+                        <!-- /page content -->
+                    </div>
+                    <!-- /page container -->
+                </body>
+            </html>
+        </template>
+
+        <template name="Company" id="website.settings/company" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
@@ -1770,7 +1413,7 @@
                 <!-- Main navbar -->
                 <div class="navbar navbar-default header-highlight">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt="" /></a>
+                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
                     </div>
                     <div class="navbar-collapse collapse" id="navbar-mobile">
                         <ul class="nav navbar-nav">
@@ -1817,347 +1460,12 @@
                             <ul class="nav navbar-nav">
                                 <li class="dropdown dropdown-user">
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- /main navbar -->
-                <!-- Page container -->
-                <div class="page-container">
-                    <!-- Page content -->
-                    <div class="page-content">
-                        <!-- Main content -->
-                        <div class="content-wrapper">
-                            <!-- Content area -->
-                            <div class="content">
-                                <!-- Detached sidebar -->
-                                <div class="sidebar-detached">
-                                    <div class="sidebar sidebar-default">
-                                        <div class="sidebar-content">
-                                            <!-- Sub navigation -->
-                                            <div class="sidebar-category">
-                                                <div class="category-title">
-                                                    <span>Profile</span>
-                                                </div>
-                                                <div class="category-content no-padding">
-                                                    <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
-                                                        <li><a href="#"><i class="icon-unlocked"></i> Permissions</a></li>
-                                                        <li><a href="#"><i class="icon-bell2"></i> Notifications</a></li>
-                                                        <li><a href="#"><i class="icon-users2"></i> Auto Bcc</a></li>
-                                                        <li><a href="#"><i class="icon-key"></i> API Keys</a></li>
-                                                    </ul>
-                                                </div>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                            </div>
-                                            <!-- /sub navigation -->
-                                        </div>
-                                    </div>
-<<<<<<< HEAD
-                                    <!-- /detached sidebar -->
-                                    <!-- Container sidebar -->
-                                    <div class="container-detached">
-                                        <div class="content-detached">
-                                            <!-- Edit mailbox -->
-                                            <div class="panel panel-white">
-                                                <div class="panel-heading">
-                                                    <h6 class="panel-title">Profile</h6>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Role</label>
-                                                            <div class="col-lg-4">
-                                                                <select name="select" class="form-control" disabled="disabled">
-=======
-                                </div>
-                                <!-- /detached sidebar -->
-                                <!-- Container sidebar -->
-                                <div class="container-detached">
-                                    <div class="content-detached">
-                                        <!-- Edit mailbox -->
-                                        <div class="panel panel-white">
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title">Profile</h6>
-                                            </div>
-                                            <div class="panel-body">
-                                                <form class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Role</label>
-                                                        <div class="col-lg-4">
-                                                            <select name="select" class="form-control" disabled="disabled">
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                                                    <option value="1">Account Owner</option>
-                                                                    <option value="2">Option 2</option>
-                                                                </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Name</label>
-                                                        <div class="col-lg-2">
-                                                            <input type="text" class="form-control" placeholder="Name" />
-                                                        </div>
-                                                        <div class="col-lg-2">
-                                                            <input type="text" class="form-control" placeholder="Last Name" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Email</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="Main Email" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Billing Email</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="text" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group" style="margin-top:-15px;">
-                                                        <label class="control-label col-lg-2 text-right"></label>
-                                                        <div class="col-lg-4">
-                                                            <label class="text-muted">Receipts will be sent this email address</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Alternate Email</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Password</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="password" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Confirm Password</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="password" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Job Title</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Phone Number</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Timezone</label>
-                                                        <div class="col-lg-4">
-                                                            <select name="select" class="form-control">
-                                                                    <option value="1">(GMT+00:00) UTC</option>
-                                                                    <option value="2">Option 2</option>
-                                                                </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Time Format</label>
-                                                        <div class="col-lg-10">
-                                                            <div class="radio-inline">
-                                                                <label>
-                                                                        <input type="radio" name="time_format" class="styled" checked="checked"/>
-                                                                        12-hour clock
-                                                                    </label>
-<<<<<<< HEAD
-                                                                </div>
-                                                                <div class="radio-inline">
-                                                                    <label>
-=======
-                                                            </div>
-                                                            <div class="radio-inline">
-                                                                <label>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                                                        <input type="radio" name="time_format" class="styled"/>
-                                                                        24-hour clock
-                                                                    </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Photo</label>
-                                                        <div class="col-lg-4">
-                                                            <input type="file" class="file-styled" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group" style="margin-top:-15px;">
-                                                        <label class="control-label col-lg-2 text-right"></label>
-                                                        <div class="col-lg-4">
-                                                            <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
-                                                        </div>
-<<<<<<< HEAD
-                                                        <div class="form-group">
-                                                            <div class="col-lg-2"></div>
-                                                            <div class="col-lg-10">
-                                                                <button type="button" class="btn btn-primary">Save</button>
-                                                            </div>
-=======
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="col-lg-2"></div>
-                                                        <div class="col-lg-10">
-                                                            <button type="button" class="btn btn-primary">Save</button>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <!-- /edit mailbox -->
-                                    </div>
-<<<<<<< HEAD
-                                    <!-- /container sidebar -->
-                                </div>
-                                <!-- /content area -->
-                            </div>
-                            <!-- /main content -->
-                        </div>
-                        <!-- /page content -->
-                    </div>
-                    <!-- /page container -->
-                </body>
-            </html>
-        </template>
-
-        <template name="Company" id="website.company" page="True">
-=======
-                                </div>
-                                <!-- /container sidebar -->
-                            </div>
-                            <!-- /content area -->
-                        </div>
-                        <!-- /main content -->
-                    </div>
-                    <!-- /page content -->
-                </div>
-                <!-- /page container -->
-            </body>
-
-            </html>
-        </template>
-        <template name="Company" id="website.settings/company" page="True">
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-            <html lang="en">
-            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-            <t t-call="hscout-erp.layout_head" />
-
-            <body class="sidebar-xs has-detached-left">
-                <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-<<<<<<< HEAD
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
-=======
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt="" /></a>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-<<<<<<< HEAD
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                    <li><a href="#"><i class="icon-office"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-users"></i> Users</a></li>
-=======
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
-                                    <li><a href="/page/settings/company"><i class="icon-users4"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
-                                    <li><a href="/page/settings/mailboxes"><i class="icon-files-empty"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-<<<<<<< HEAD
                                         <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt=""/>
-=======
-                                        <img src="assets/images/demo/users/face11.jpg" alt="" />
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                         <span>Victoria</span>
                                         <i class="caret"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-right">
-<<<<<<< HEAD
-                                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-=======
                                         <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                         <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                                         <li class="divider"></li>
                                         <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
@@ -2217,21 +1525,13 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Company Name</label>
                                                             <div class="col-lg-4">
-<<<<<<< HEAD
                                                                 <input type="text" class="form-control"/>
-=======
-                                                                <input type="text" class="form-control" />
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Next Conversation#</label>
                                                             <div class="col-lg-4">
-<<<<<<< HEAD
                                                                 <input type="text" class="form-control"/>
-=======
-                                                                <input type="text" class="form-control" />
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -2283,11 +1583,7 @@
                                                             <label class="control-label col-lg-2">Conversation Lock</label>
                                                             <div class="col-lg-2">
                                                                 <div class="input-group">
-<<<<<<< HEAD
                                                                     <input type="text" placeholder="30" class="form-control"/>
-=======
-                                                                    <input type="text" placeholder="30" class="form-control" />
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                                                                     <span class="input-group-addon">days</span>
                                                                 </div>
                                                             </div>
@@ -2334,20 +1630,20 @@
                                     </div>
                                 </div>
                                 <!-- /container sidebar -->
+                                
                             </div>
-                            <!-- /main content -->
+                            <!-- /content content -->
                         </div>
-<<<<<<< HEAD
                         <!-- /main content -->
-=======
-                        <!-- /page content -->
                     </div>
-                    <!-- /page container -->
+                    <!-- /page content -->
                 </div>
+                <!-- /page container -->
             </body>
 
             </html>
         </template>
+
         <template name="Auto Reply" id="website.settings/company/autoreply" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -2357,7 +1653,7 @@
                 <!-- Main navbar -->
                 <div class="navbar navbar-default header-highlight">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt="" /></a>
+                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt="" /></a>
                     </div>
                     <div class="navbar-collapse collapse" id="navbar-mobile">
                         <ul class="nav navbar-nav">
@@ -2404,7 +1700,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="dropdown dropdown-user">
                                     <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="assets/images/demo/users/face11.jpg" alt="" />
+                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
                                         <span>Victoria</span>
                                         <i class="caret"></i>
                                     </a>
@@ -2418,16 +1714,8 @@
                                 </li>
                             </ul>
                         </div>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
                     </div>
                 </div>
-<<<<<<< HEAD
-                <!-- /page container -->
-            </body>
-
-            </html>
-        </template>
-=======
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -2474,41 +1762,39 @@
                                                 <h6 class="panel-title">Auto Reply</h6>
                                             </div>
                                             <div class="panel-body">
-                                                <form class="form-horizontal">
-                                                    <form action="#" class="form-horizontal">
-                                                        <fieldset class="content-group">
-                                                            <div class="form-group">
-                                                                <label class="control-label col-lg-2">Enable Auto Reply</label>
-                                                                <div class="col-lg-10">
-                                                                    <div class="checkbox checkbox-switchery">
-                                                                        <label>
-                                                      <input type="checkbox" class="switchery-primary" checked="checked"/>
-                                                      </label>
-                                                                    </div>
+                                                <form action="#" class="form-horizontal">
+                                                    <fieldset class="content-group">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2">Enable Auto Reply</label>
+                                                            <div class="col-lg-10">
+                                                                <div class="checkbox checkbox-switchery">
+                                                                    <label>
+                                                                    <input type="checkbox" class="switchery-primary" checked="checked"/>
+                                                                    </label>
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label col-lg-2">Subject</label>
-                                                                <div class="col-lg-4">
-                                                                    <input type="text" class="form-control" placeholder="Re: {%subject%}" />
-                                                                </div>
-                                                            </div>
-                                                            <!-- Summernote editor -->
-                                                            <div class="form-group">
-                                                                <label class="control-label col-lg-2">Subject</label>
-                                                                <div class="col-lg-10">
-                                                                    <div class="summernote">
-                                                                    </div>
-                                                                    <p>Auto replies don't include your mailbox signature, so
-                                                                        be sure to add your contact information if necessary.</p>
-                                                                </div>
-                                                            </div>
-                                                        </fieldset>
-                                                        <div class="text-left">
-                                                            <label class="control-label col-lg-2"></label>
-                                                            <div class="col-lg-10"><button class="btn btn-primary" type="submit">Save</button></div>
                                                         </div>
-                                                    </form>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2">Subject</label>
+                                                            <div class="col-lg-4">
+                                                                <input type="text" class="form-control" placeholder="Re: {%subject%}" />
+                                                            </div>
+                                                        </div>
+                                                        <!-- Summernote editor -->
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2">Subject</label>
+                                                            <div class="col-lg-10">
+                                                                <div class="summernote">
+                                                                </div>
+                                                                <p>Auto replies don't include your mailbox signature, so
+                                                                    be sure to add your contact information if necessary.</p>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="text-left">
+                                                        <label class="control-label col-lg-2"></label>
+                                                        <div class="col-lg-10"><button class="btn btn-primary" type="submit">Save</button></div>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -2516,16 +1802,15 @@
                                     </div>
                                 </div>
                                 <!-- /container sidebar -->
-                                <!-- /content area -->
                             </div>
-                            <!-- /main content -->
+                            <!-- /content area -->
                         </div>
-                        <!-- /page content -->
+                        <!-- /main content -->
                     </div>
-                    <!-- /page container -->
+                    <!-- /page content -->
                 </div>
+                <!-- /page container -->
             </body>
->>>>>>> 53b91f5f2d9e6f844e5c84192aece54013cf65f6
 
             </html>
         </template>
