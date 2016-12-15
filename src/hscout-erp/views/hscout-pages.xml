@@ -53,6 +53,75 @@
                 </div>
             </t>
         </template>
+                <template id="layout_menu" name="Menu Layout">
+            <!-- Main navbar -->
+            <div class="navbar navbar-default header-highlight">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt="" /></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#">
+                                <span class="position-right">Mailbox</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                <span class="position-right">Docs</span>
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Reports</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                                <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
+                                <li><a href="#"><i class="icon-users4"></i>Team</a></li>
+                                <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <span>Manage</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
+                                <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
+                                <li><a href="/page/settings/company"><i class="icon-users4"></i>Company</a></li>
+                                <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
+                                <li><a href="/page/settings/mailboxes"><i class="icon-files-empty"></i> Mailbox</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
+                                <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown dropdown-user">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
+                                    <span>Victoria</span>
+                                    <i class="caret"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
+                                    <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                                    <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /main navbar -->
+        </template>
         <!-- === Mailbox === -->
         <template name="Mailbox" id="website.mailbox" page="True">
             <html lang="en">
@@ -61,71 +130,7 @@
 
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_icon_light.png" alt="" /></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                    <li><a href="#"><i class="icon-office"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -261,71 +266,7 @@
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt="" /></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                    <li><a href="#"><i class="icon-office"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -563,71 +504,7 @@
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt="" /></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="/page/settings/mailboxes">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                    <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -720,73 +597,9 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
                 <t t-call="hscout-erp.layout_head"/>
                 <body class="sidebar-xs">
-                    <!-- Main navbar -->
-                    <div class="navbar navbar-default header-highlight">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
-                        </div>
-                        <div class="navbar-collapse collapse" id="navbar-mobile">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown">
-                                    <a href="/settings/company">
-                                        <span class="position-right">Mailbox</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">
-                                        <span class="position-right">Docs</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Reports</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                        <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                        <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                        <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Manage</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                        <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                        <li><a href="#"><i class="icon-office"></i>Company</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                        <li><a href="#"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                        <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                        <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="navbar-right">
-                                <ul class="nav navbar-nav">
-                                    <li class="dropdown dropdown-user">
-                                        <a class="dropdown-toggle" data-toggle="dropdown">
-                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt=""/>
-                                            <span>Victoria</span>
-                                            <i class="caret"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                            <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /main navbar -->
+                <!-- Main navbar -->
+                <t t-call="hscout-erp.layout_menu" />
+                <!-- /main navbar -->
                     <!-- Page container -->
                     <div class="page-container">
                         <!-- Page content -->
@@ -1008,73 +821,9 @@
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
                 <t t-call="hscout-erp.layout_head"/>
                 <body class="sidebar-xs has-detached-left">
-                    <!-- Main navbar -->
-                    <div class="navbar navbar-default header-highlight">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
-                        </div>
-                        <div class="navbar-collapse collapse" id="navbar-mobile">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown">
-                                    <a href="#">
-                                        <span class="position-right">Mailbox</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">
-                                        <span class="position-right">Docs</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Reports</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                        <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                        <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                        <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Manage</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                        <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                        <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                        <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                        <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                        <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="navbar-right">
-                                <ul class="nav navbar-nav">
-                                    <li class="dropdown dropdown-user">
-                                        <a class="dropdown-toggle" data-toggle="dropdown">
-                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt=""/>
-                                            <span>Victoria</span>
-                                            <i class="caret"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                            <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /main navbar -->
+                <!-- Main navbar -->
+                <t t-call="hscout-erp.layout_menu" />
+                <!-- /main navbar -->
                     <!-- Page container -->
                     <div class="page-container">
                         <!-- Page content -->
@@ -1160,78 +909,14 @@
         </template>
 
         <!-- === Profile === -->
-        <template name="Profile" id="website.profile" page="True">
+        <template name="Profile" id="website.users/profile" page="True">
             <html lang="en">
                 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
                 <t t-call="hscout-erp.layout_head"/>
                 <body class="sidebar-xs has-detached-left">
-                    <!-- Main navbar -->
-                    <div class="navbar navbar-default header-highlight">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
-                        </div>
-                        <div class="navbar-collapse collapse" id="navbar-mobile">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown">
-                                    <a href="#">
-                                        <span class="position-right">Mailbox</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">
-                                        <span class="position-right">Docs</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Reports</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                        <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                        <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                        <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <span>Manage</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                        <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                        <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
-                                        <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                        <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                        <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                        <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="navbar-right">
-                                <ul class="nav navbar-nav">
-                                    <li class="dropdown dropdown-user">
-                                        <a class="dropdown-toggle" data-toggle="dropdown">
-                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt=""/>
-                                            <span>Victoria</span>
-                                            <i class="caret"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                            <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /main navbar -->
+                <!-- Main navbar -->
+                <t t-call="hscout-erp.layout_menu" />
+                <!-- /main navbar -->
                     <!-- Page container -->
                     <div class="page-container">
                         <!-- Page content -->
@@ -1411,71 +1096,7 @@
 
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt=""/></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-cube2"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-puzzle2"></i> Beacons</a></li>
-                                    <li><a href="/page/settings/company"><i class="icon-office"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                    <li><a href="/page/settings/mailboxes"><i class="icon-mailbox"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-price-tag3"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-users"></i> Users</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt=""/>
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -1651,71 +1272,7 @@
 
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
-                <div class="navbar navbar-default header-highlight">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="/hscout-erp/static/src/assets/images/logo_light.png" alt="" /></a>
-                    </div>
-                    <div class="navbar-collapse collapse" id="navbar-mobile">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Mailbox</span>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#">
-                                    <span class="position-right">Docs</span>
-                                </a>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Reports</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
-                                    <li><a href="#"><i class="icon-users4"></i>Team</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Docs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropdown-user">
-                                <a class="dropdown-toggle" data-toggle="dropdown">
-                                    <span>Manage</span>
-                                    <i class="caret"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-bubbles9"></i> Apps</a></li>
-                                    <li><a href="#"><i class="icon-stats-growth2"></i> Beacons</a></li>
-                                    <li><a href="/page/settings/company"><i class="icon-users4"></i>Company</a></li>
-                                    <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
-                                    <li><a href="/page/settings/mailboxes"><i class="icon-files-empty"></i> Mailbox</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
-                                    <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li class="dropdown dropdown-user">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" alt="" />
-                                        <span>Victoria</span>
-                                        <i class="caret"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="/page/users/profile"><i class="icon-user-plus"></i> My profile</a></li>
-                                        <li><a href="#"><span class="badge bg-blue pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
                 <!-- Page container -->
                 <div class="page-container">
@@ -1814,5 +1371,247 @@
 
             </html>
         </template>
+        
+        <template name="Notifications" id="website.settings/notifications" page="True">
+            <html lang="en">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head" />
+
+            <body class="sidebar-xs has-detached-left">
+                <!-- Main navbar -->
+                <t t-call="hscout-erp.layout_menu" />
+                <!-- /main navbar -->
+                <!-- Page container -->
+                <div class="page-container">
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <!-- Main sidebar -->
+                        <!-- /main sidebar -->
+                        <!-- Main content -->
+                        <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <!-- Detached sidebar -->
+                                <div class="sidebar-detached">
+                                    <div class="sidebar sidebar-default">
+                                        <div class="sidebar-content">
+                                            <!-- Sub navigation -->
+                                            <div class="sidebar-category">
+                                                <div class="category-title">
+                                                    <span>Desarrollo</span>
+                                                </div>
+                                                <div class="category-content no-padding">
+                                                    <ul class="navigation navigation-alt navigation-accordion">
+                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
+                                                        <li><a href="#"><i class="icon-unlocked"></i> Connection Settings</a></li>
+                                                        <li><a href="#"><i class="icon-bell2"></i> Permissions</a></li>
+                                                        <li><a href="/page/settings/company/autoreply"><i class="icon-users2"></i> Auto Reply</a></li>
+                                                        <li><a href="#"><i class="icon-key"></i> Saved Replies</a></li>
+                                                        <li><a href="#"><i class="icon-key"></i> Workflows</a></li>
+                                                        <li><a href="#"><i class="icon-key"></i> Satisfaction Ratings</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /sub navigation -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /detached sidebar -->
+                                <!-- Container sidebar -->
+                                <div class="container-detached">
+                                    <div class="content-detached">
+                                        <!-- Edit mailbox -->
+                                        <div class="panel panel-white">
+                                            <div class="panel-heading">
+                                                <h6 class="panel-title">Notifications</h6>
+                                            </div>
+                                            <div class="panel-body">
+                                                <form class="form-horizontal">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="col-md-9"></th>
+                                                                <th class="col-md-1 text-center">Email</th>
+                                                                <th class="col-md-1 text-center">Mobile</th>
+                                                                <th class="col-md-1 text-center">Browser</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="col-md-9"><strong>Notify me when...</strong></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">There is a new conversation</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">A conversation is assigned to me</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">A conversation is assigned to someone else</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">A conversation I'm following is updated</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9"><strong>Notify me when a customer replies…</strong></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To an unassigned conversation</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To one of my conversations</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To a conversation owned by someone else</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9"><strong>Notify me when another Help Scout user replies or adds a note…</strong></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                                <td class="col-md-1 text-center"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To an unassigned conversation</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To one of my conversations</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="col-md-9">To a conversation owned by someone else</td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" checked="checked" /></td>
+                                                                <td class="col-md-1 text-center"><input type="checkbox" /></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="form-group">
+                                                        <div class="col-lg-12">
+                                                            <button type="button" class="btn btn-primary">Save Notifications</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- /edit mailbox -->
+                                    </div>
+                                </div>
+                                <!-- /container sidebar -->
+                                <!-- /content area -->
+                            </div>
+                            <!-- /main content -->
+                        </div>
+                        <!-- /page content -->
+                    </div>
+                    <!-- /page container -->
+                </div>
+            </body>
+
+            </html>
+        </template>
+        <template name="Dashboard" id="website.dashboard" page="True">
+            <html lang="en">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head" />
+
+            <body class="sidebar-xs has-detached-left">
+                <!-- Main navbar -->
+                <t t-call="hscout-erp.layout_menu" />
+                <!-- /main navbar -->
+                <!-- Page container -->
+                <div class="page-container">
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <!-- Main content -->
+                        <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <div class="row">
+                                    <!-- Thumbnail footer -->
+                                    <h6 class="content-group text-semibold">
+                                        Globalstd Dashboard
+                                    </h6>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="panel panel-body border-top-info">
+                                                <div class="text-left">
+                                                    <h6 class="no-margin text-semibold">Desarrollo</h6>
+                                                    <p class="content-group-sm text-muted"> <code>desarrollo@globalstd.com</code></p>
+                                                </div>
+                                                <ul style="display: block; position: static; width: 100%; margin-top: 0; float: none;" class="dropdown-menu">
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">65</span>  Unassigred</a></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">23</span>  Mine</a></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">83</span>  Closed</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">98</span>  Spam</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="thumbnail">
+                                                <div class="caption">
+                                                    Content Nov 28
+                                                    <h6 class="text-semibold no-margin-top">Tip: Working with Variables</h6>
+                                                    Variables are placeholders for generated customer, user, mailbox, and conversation data. For example, you could use a customer
+                                                    variable to automatically fill-in customer names in a saved reply. Learn
+                                                    more here.
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <ul class="pull-right">
+                                                        <li><a href="#">	
+                                    View all updates</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /thumbnail footer -->
+                                </div>
+                                <!-- /content area -->
+                            </div>
+                            <!-- /main content -->
+                        </div>
+                        <!-- /page content -->
+                    </div>
+                    <!-- /page container -->
+                </div>
+            </body>
+
+            </html>
+        </template>
+        
     </data>
 </odoo>
