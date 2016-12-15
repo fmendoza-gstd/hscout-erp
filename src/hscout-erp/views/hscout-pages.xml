@@ -1172,7 +1172,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Next Conversation#</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control" />
+                                                                <input type="text" class="form-control" t-attf-value="{{obj and obj.company_id.hs_next_conversation}}" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -1214,9 +1214,12 @@
                                                             <label class="control-label col-lg-2">Open Tracking</label>
                                                             <div class="col-lg-10">
                                                                 <div class="checkbox checkbox-switchery">
-                                                                    <label>
-                                                    <input type="checkbox" class="switchery-primary" checked="checked"/>
-                                                    </label>
+                                                                    <t t-if="obj.company_id.hs_open_tracking">
+                                                                        <input type="checkbox" class="switchery-primary" checked="checked"/>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_open_tracking">
+                                                                        <input type="checkbox" class="switchery-primary"/>
+                                                                    </t>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1224,7 +1227,7 @@
                                                             <label class="control-label col-lg-2">Conversation Lock</label>
                                                             <div class="col-lg-2">
                                                                 <div class="input-group">
-                                                                    <input type="text" placeholder="30" class="form-control" />
+                                                                    <input type="text" placeholder="30" class="form-control" t-attf-value="{{obj and obj.company_id.hs_conversation_lock}}"/>
                                                                     <span class="input-group-addon">days</span>
                                                                 </div>
                                                             </div>
@@ -1233,28 +1236,63 @@
                                                             <label class="control-label col-lg-2">Timezone</label>
                                                             <div class="col-lg-4">
                                                                 <select class="form-control" name="select">
-                                                    <option value="opt1">(GMT-10:00) Hawaiian/Aleutian Time</option>
-                                                    <option value="opt2">Option 2</option>
-                                                    <option value="opt3">Option 3</option>
-                                                    <option value="opt4">Option 4</option>
-                                                    <option value="opt5">Option 5</option>
-                                                    <option value="opt6">Option 6</option>
-                                                    <option value="opt7">Option 7</option>
-                                                    <option value="opt8">Option 8</option>
-                                                </select>
+                                                                    <option value="0">-</option>
+                                                                    <t t-if="obj.company_id.hs_time_zone == 'America/Los_Angeles'">
+                                                                        <option value="America/Los_Angeles" selected="selected">(GMT-08:00) Pacific Time (US)</option>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_time_zone == 'America/Los_Angeles'">
+                                                                        <option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US)</option>
+                                                                    </t>
+                                                                    <t t-if="obj.company_id.hs_time_zone == 'America/Monterrey'">
+                                                                        <option value="America/Monterrey" selected="selected">(GMT-06:00) Central Time (Mexico City, Monterey)</option>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_time_zone == 'America/Monterrey'">
+                                                                        <option value="America/Monterrey">(GMT-06:00) Central Time (Mexico City, Monterey)</option>
+                                                                    </t>
+                                                                    <t t-if="obj.company_id.hs_time_zone == 'America/New_York'">
+                                                                        <option value="America/New_York" selected="selected">(GMT-05:00) Eastern Time (US)</option>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_time_zone == 'America/New_York'">
+                                                                        <option value="America/New_York">(GMT-05:00) Eastern Time (US)</option>
+                                                                    </t>
+                                                                    <t t-if="obj.company_id.hs_time_zone == 'Etc/GMT+2'">
+                                                                        <option value="Etc/GMT+2" selected="selected">(GMT-02:00) GMT-2:00</option>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_time_zone == 'Etc/GMT+2'">
+                                                                        <option value="Etc/GMT+2">(GMT-02:00) GMT-2:00</option>
+                                                                    </t>
+                                                                    <t t-if="obj.company_id.hs_time_zone == 'UTC'">
+                                                                        <option value="UTC" selected="selected">(GMT+00:00) UTC</option>
+                                                                    </t>
+                                                                    <t t-if="not obj.company_id.hs_time_zone == 'UTC'">
+                                                                        <option value="UTC">(GMT+00:00) UTC</option>
+                                                                    </t>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Time Format</label>
                                                             <div class="col-lg-10">
-                                                                <label class="radio-inline radio-right">
-                                                <input type="radio" name="radio-unstyled-inline-right" checked="checked"/>
-                                                12-hour clock (e.g. 2:13pm)
-                                                </label>
-                                                                <label class="radio-inline radio-right">
-                                                <input type="radio" name="radio-unstyled-inline-right"/>
-                                                24-hour clock (e.g. 14:13)
-                                                </label>
+                                                                <t t-if="obj.company_id.hs_time_format">
+                                                                    <label class="radio-inline radio-right">
+                                                                        <input type="radio" name="radio-unstyled-inline-right" checked="checked"/>
+                                                                        12-hour clock (e.g. 2:13pm)
+                                                                    </label>
+                                                                    <label class="radio-inline radio-right">
+                                                                        <input type="radio" name="radio-unstyled-inline-right"/>
+                                                                        24-hour clock (e.g. 14:13)
+                                                                    </label>
+                                                                </t>
+                                                                <t t-if="not obj.company_id.hs_time_format">
+                                                                    <label class="radio-inline radio-right">
+                                                                        <input type="radio" name="radio-unstyled-inline-right"/>
+                                                                        12-hour clock (e.g. 2:13pm)
+                                                                    </label>
+                                                                    <label class="radio-inline radio-right">
+                                                                        <input type="radio" name="radio-unstyled-inline-right" checked="checked"/>
+                                                                        24-hour clock (e.g. 14:13)
+                                                                    </label>
+                                                                </t>
                                                             </div>
                                                         </div>
                                                     </fieldset>
