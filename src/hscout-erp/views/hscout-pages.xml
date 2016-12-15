@@ -53,7 +53,7 @@
                 </div>
             </t>
         </template>
-                <template id="layout_menu" name="Menu Layout">
+        <template id="layout_menu" name="Menu Layout">
             <!-- Main navbar -->
             <div class="navbar navbar-default header-highlight">
                 <div class="navbar-header">
@@ -590,505 +590,525 @@
 
             </html>
         </template>
-
         <!-- === Users === -->
         <template name="Users" id="website.users" page="True">
             <html lang="en">
-                <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-                <t t-call="hscout-erp.layout_head"/>
-                <body class="sidebar-xs">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head" />
+
+            <body class="sidebar-xs">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
-                    <!-- Page container -->
-                    <div class="page-container">
-                        <!-- Page content -->
-                        <div class="page-content">
-                            <!-- Main content -->
-                            <div class="content-wrapper">
-                                <!-- Content area -->
-                                <div class="content">
-                                    <!-- User panel -->
-                                    <div class="panel panel-white">
-                                        <div class="panel-heading">
-                                            <h6 class="panel-title">Users</h6>
-                                            <div class="heading-elements">
-                                                <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New User</button>
-                                            </div>
+                <!-- Page container -->
+                <div class="page-container">
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <!-- Main content -->
+                        <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <!-- User panel -->
+                                <div class="panel panel-white">
+                                    <div class="panel-heading">
+                                        <h6 class="panel-title">Users</h6>
+                                        <div class="heading-elements">
+                                            <button type="submit" class="btn btn-primary heading-btn"><i class="icon-plus22"></i> New User</button>
                                         </div>
                                     </div>
-                                    <!-- /user panel -->
-                                    <!-- Horizontal icons -->
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face24.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Israel Valdivia</h6>
-                                                        <p class="text-muted">User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face9.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Francisco Mendoza</h6>
-                                                        <p class="text-muted">User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face23.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Eduardo Vazquez</h6>
-                                                        <p class="text-muted">User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face25.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Gabriel Vazquez</h6>
-                                                        <p class="text-muted">User</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face1.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">James Alexander</h6>
-                                                        <p class="text-muted">Lead developer</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face2.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Nathan Jacobson</h6>
-                                                        <p class="text-muted">Lead UX designer</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face3.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Margo Baker</h6>
-                                                        <p class="text-muted">Sales manager</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face4.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Barbara Walden</h6>
-                                                        <p class="text-muted">SEO specialist</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Hanna Dorman</h6>
-                                                        <p class="text-muted">UX/UI designer</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face14.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Benjamin Loretti</h6>
-                                                        <p class="text-muted">Network engineer</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face13.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">Vanessa Aurelius</h6>
-                                                        <p class="text-muted">Front end guru</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="panel panel-body">
-                                                <div class="media">
-                                                    <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <img src="/hscout-erp/static/src/assets/images/demo/users/face8.jpg" style="width: 70px; height: 70px;" class="img-circle" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h6 class="media-heading">William Brenson</h6>
-                                                        <p class="text-muted">Chief officer</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /horizontal icons -->
                                 </div>
-                                <!-- /content area -->
+                                <!-- /user panel -->
+                                <!-- Horizontal icons -->
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face24.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                 
+                                                    <h6 class="media-heading">Israel Valdivia
+                                                                       <t t-foreach="customer" t-as="customisito">
+                                                        <p>
+                                                            <t t-esc="customisito.id" />
+                                                            <t t-esc="customisito.name" />
+                                                        </p>
+                                                    </t>
+                                                    
+                                                    </h6>
+                                                    <p class="text-muted">User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face9.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Francisco Mendoza</h6>
+                                                    <p class="text-muted">User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face23.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Eduardo Vazquez</h6>
+                                                    <p class="text-muted">User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face25.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Gabriel Vazquez</h6>
+                                                    <p class="text-muted">User</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face1.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">James Alexander</h6>
+                                                    <p class="text-muted">Lead developer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face2.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Nathan Jacobson</h6>
+                                                    <p class="text-muted">Lead UX designer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face3.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Margo Baker</h6>
+                                                    <p class="text-muted">Sales manager</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face4.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Barbara Walden</h6>
+                                                    <p class="text-muted">SEO specialist</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Hanna Dorman</h6>
+                                                    <p class="text-muted">UX/UI designer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face14.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Benjamin Loretti</h6>
+                                                    <p class="text-muted">Network engineer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face13.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Vanessa Aurelius</h6>
+                                                    <p class="text-muted">Front end guru</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="panel panel-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face8.jpg" style="width: 70px; height: 70px;" class="img-circle"
+                                                            alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">William Brenson</h6>
+                                                    <p class="text-muted">Chief officer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /horizontal icons -->
                             </div>
-                            <!-- /main content -->
+                            <!-- /content area -->
                         </div>
-                        <!-- /page content -->
+                        <!-- /main content -->
                     </div>
-                    <!-- /page container -->
-                </body>
+                    <!-- /page content -->
+                </div>
+                <!-- /page container -->
+            </body>
 
             </html>
         </template>
-
         <!-- === Spam === -->
         <template name="Spam settings" id="website.settings/spam" page="True">
             <html lang="en">
-                <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-                <t t-call="hscout-erp.layout_head"/>
-                <body class="sidebar-xs has-detached-left">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head" />
+
+            <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
-                    <!-- Page container -->
-                    <div class="page-container">
-                        <!-- Page content -->
-                        <div class="page-content">
-                            <!-- Main sidebar -->
-                            <!-- /main sidebar -->
-                            <!-- Main content -->
-                            <div class="content-wrapper">
-                                <!-- Content area -->
-                                <div class="content">
-                                    <!-- Detached sidebar -->
-                                    <div class="sidebar-detached">
-                                        <div class="sidebar sidebar-default">
-                                            <div class="sidebar-content">
-                                                <!-- Sub navigation -->
-                                                <div class="sidebar-category">
-                                                    <div class="category-title">
-                                                        <span>Globalstd</span>
-                                                    </div>
-                                                    <div class="category-content no-padding">
-                                                        <ul class="navigation navigation-alt navigation-accordion">
-                                                            <li><a href="#"><i class="icon-user-tie"></i> Edit Company</a></li>
-                                                            <li><a href="#"><i class="icon-unlocked"></i> Features</a></li>
-                                                            <li><a href="#"><i class="icon-bell2"></i> Import Data</a></li>
-                                                            <li><a href="#"><i class="icon-users2"></i> Spam Filtering</a></li>
-                                                            <li><a href="#"><i class="icon-key"></i> Office Hours</a></li>
-                                                        </ul>
-                                                    </div>
+                <!-- Page container -->
+                <div class="page-container">
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <!-- Main sidebar -->
+                        <!-- /main sidebar -->
+                        <!-- Main content -->
+                        <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <!-- Detached sidebar -->
+                                <div class="sidebar-detached">
+                                    <div class="sidebar sidebar-default">
+                                        <div class="sidebar-content">
+                                            <!-- Sub navigation -->
+                                            <div class="sidebar-category">
+                                                <div class="category-title">
+                                                    <span>Globalstd</span>
                                                 </div>
-                                                <!-- /sub navigation -->
+                                                <div class="category-content no-padding">
+                                                    <ul class="navigation navigation-alt navigation-accordion">
+                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Company</a></li>
+                                                        <li><a href="#"><i class="icon-unlocked"></i> Features</a></li>
+                                                        <li><a href="#"><i class="icon-bell2"></i> Import Data</a></li>
+                                                        <li><a href="#"><i class="icon-users2"></i> Spam Filtering</a></li>
+                                                        <li><a href="#"><i class="icon-key"></i> Office Hours</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
+                                            <!-- /sub navigation -->
                                         </div>
                                     </div>
-                                    <!-- /detached sidebar -->
-                                    <!-- Container sidebar -->
-                                    <div class="container-detached">
-                                        <div class="content-detached">
-                                            <!-- Edit mailbox -->
-                                            <div class="panel panel-white">
-                                                <div class="panel-heading">
-                                                    <h6 class="panel-title">Spam Settings</h6>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <form action="#" class="form-horizontal">
-                                                        <fieldset class="content-group">
-                                                            <div class="form-group">
-                                                                <label class="control-label col-lg-2 text-right">Whitelist</label>
-                                                                <div class="col-lg-4">
-                                                                    <textarea type="text" rows="5" class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label col-lg-2 text-right">Blacklist</label>
-                                                                <div class="col-lg-4">
-                                                                    <textarea type="text" rows="5" class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </fieldset>
+                                </div>
+                                <!-- /detached sidebar -->
+                                <!-- Container sidebar -->
+                                <div class="container-detached">
+                                    <div class="content-detached">
+                                        <!-- Edit mailbox -->
+                                        <div class="panel panel-white">
+                                            <div class="panel-heading">
+                                                <h6 class="panel-title">Spam Settings</h6>
+                                            </div>
+                                            <div class="panel-body">
+                                                <form action="#" class="form-horizontal">
+                                                    <fieldset class="content-group">
                                                         <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right"></label>
-                                                            <div class="text-left">
-                                                                <button class="btn btn-primary" type="submit">Save</button>
+                                                            <label class="control-label col-lg-2 text-right">Whitelist</label>
+                                                            <div class="col-lg-4">
+                                                                <textarea type="text" rows="5" class="form-control"></textarea>
                                                             </div>
                                                         </div>
-                                                    </form>
-                                                </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-2 text-right">Blacklist</label>
+                                                            <div class="col-lg-4">
+                                                                <textarea type="text" rows="5" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right"></label>
+                                                        <div class="text-left">
+                                                            <button class="btn btn-primary" type="submit">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <!-- /edit mailbox -->
                                         </div>
+                                        <!-- /edit mailbox -->
                                     </div>
-                                    <!-- /container sidebar -->
                                 </div>
-                                <!-- /content area -->
+                                <!-- /container sidebar -->
                             </div>
-                            <!-- /main content -->
+                            <!-- /content area -->
                         </div>
-                        <!-- /page content -->
+                        <!-- /main content -->
                     </div>
-                    <!-- /page container -->
-                </body>
+                    <!-- /page content -->
+                </div>
+                <!-- /page container -->
+            </body>
 
             </html>
         </template>
-
         <!-- === Profile === -->
         <template name="Profile" id="website.users/profile" page="True">
             <html lang="en">
-                <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-                <t t-call="hscout-erp.layout_head"/>
-                <body class="sidebar-xs has-detached-left">
+            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+            <t t-call="hscout-erp.layout_head" />
+
+            <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
                 <!-- /main navbar -->
-                    <!-- Page container -->
-                    <div class="page-container">
-                        <!-- Page content -->
-                        <div class="page-content">
-                            <!-- Main content -->
-                            <div class="content-wrapper">
-                                <!-- Content area -->
-                                <div class="content">
-                                    <!-- Detached sidebar -->
-                                    <div class="sidebar-detached">
-                                        <div class="sidebar sidebar-default">
-                                            <div class="sidebar-content">
-                                                <!-- Sub navigation -->
-                                                <div class="sidebar-category">
-                                                    <div class="category-title">
-                                                        <span>Profile</span>
-                                                    </div>
-                                                    <div class="category-content no-padding">
-                                                        <ul class="navigation navigation-alt navigation-accordion">
-                                                            <li><a href="/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
-                                                            <li><a href="#"><i class="icon-unlocked"></i> Permissions</a></li>
-                                                            <li><a href="#"><i class="icon-bell2"></i> Notifications</a></li>
-                                                            <li><a href="#"><i class="icon-users2"></i> Auto Bcc</a></li>
-                                                            <li><a href="#"><i class="icon-key"></i> API Keys</a></li>
-                                                        </ul>
-                                                    </div>
+                <!-- Page container -->
+                <div class="page-container">
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <!-- Main content -->
+                        <div class="content-wrapper">
+                            <!-- Content area -->
+                            <div class="content">
+                                <!-- Detached sidebar -->
+                                <div class="sidebar-detached">
+                                    <div class="sidebar sidebar-default">
+                                        <div class="sidebar-content">
+                                            <!-- Sub navigation -->
+                                            <div class="sidebar-category">
+                                                <div class="category-title">
+                                                    <span>Profile</span>
                                                 </div>
-                                                <!-- /sub navigation -->
+                                                <div class="category-content no-padding">
+                                                    <ul class="navigation navigation-alt navigation-accordion">
+                                                        <li><a href="/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
+                                                        <li><a href="#"><i class="icon-unlocked"></i> Permissions</a></li>
+                                                        <li><a href="#"><i class="icon-bell2"></i> Notifications</a></li>
+                                                        <li><a href="#"><i class="icon-users2"></i> Auto Bcc</a></li>
+                                                        <li><a href="#"><i class="icon-key"></i> API Keys</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
+                                            <!-- /sub navigation -->
                                         </div>
                                     </div>
-                                    <!-- /detached sidebar -->
-                                    <!-- Container sidebar -->
-                                    <div class="container-detached">
-                                        <div class="content-detached">
-                                            <!-- Edit mailbox -->
-                                            <div class="panel panel-white">
-                                                <div class="panel-heading">
-                                                    <h6 class="panel-title">Profile</h6>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <form class="form-horizontal">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Role</label>
-                                                            <div class="col-lg-4">
-                                                                <select name="select" class="form-control" disabled="disabled">
+                                </div>
+                                <!-- /detached sidebar -->
+                                <!-- Container sidebar -->
+                                <div class="container-detached">
+                                    <div class="content-detached">
+                                        <!-- Edit mailbox -->
+                                        <div class="panel panel-white">
+                                            <div class="panel-heading">
+                                                <h6 class="panel-title">Profile</h6>
+                                            </div>
+                                            <div class="panel-body">
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Role</label>
+                                                        <div class="col-lg-4">
+                                                            <select name="select" class="form-control" disabled="disabled">
                                                                     <option value="1">Account Owner</option>
                                                                     <option value="2">Option 2</option>
                                                                 </select>
-                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Name</label>
-                                                            <div class="col-lg-2">
-                                                                <input type="text" class="form-control" placeholder="Name" />
-                                                            </div>
-                                                            <div class="col-lg-2">
-                                                                <input type="text" class="form-control" placeholder="Last Name" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Name</label>
+                                                        <div class="col-lg-2">
+                                                            <input type="text" class="form-control" placeholder="Name" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Email</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="text" class="form-control" placeholder="Main Email" />
-                                                            </div>
+                                                        <div class="col-lg-2">
+                                                            <input type="text" class="form-control" placeholder="Last Name" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Billing Email</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="text" class="form-control" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Email</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control" placeholder="Main Email" />
                                                         </div>
-                                                        <div class="form-group" style="margin-top:-15px;">
-                                                            <label class="control-label col-lg-2 text-right"></label>
-                                                            <div class="col-lg-4">
-                                                                <label class="text-muted">Receipts will be sent this email address</label>
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Billing Email</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Alternate Email</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="text" class="form-control" placeholder="(Optional)" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group" style="margin-top:-15px;">
+                                                        <label class="control-label col-lg-2 text-right"></label>
+                                                        <div class="col-lg-4">
+                                                            <label class="text-muted">Receipts will be sent this email address</label>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Password</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="password" class="form-control" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Alternate Email</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control" placeholder="(Optional)" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Confirm Password</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="password" class="form-control" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Password</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="password" class="form-control" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Job Title</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="text" class="form-control" placeholder="(Optional)" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Confirm Password</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="password" class="form-control" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Phone Number</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="text" class="form-control" placeholder="(Optional)" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Job Title</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control" placeholder="(Optional)" />
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Timezone</label>
-                                                            <div class="col-lg-4">
-                                                                <select name="select" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Phone Number</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="text" class="form-control" placeholder="(Optional)" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Timezone</label>
+                                                        <div class="col-lg-4">
+                                                            <select name="select" class="form-control">
                                                                         <option value="1">(GMT+00:00) UTC</option>
                                                                         <option value="2">Option 2</option>
                                                                     </select>
-                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Time Format</label>
-                                                            <div class="col-lg-10">
-                                                                <div class="radio-inline">
-                                                                    <label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Time Format</label>
+                                                        <div class="col-lg-10">
+                                                            <div class="radio-inline">
+                                                                <label>
                                                                         <input type="radio" name="time_format" class="styled" checked="checked"/>
                                                                         12-hour clock
                                                                     </label>
-                                                                </div>
-                                                                <div class="radio-inline">
-                                                                    <label>
+                                                            </div>
+                                                            <div class="radio-inline">
+                                                                <label>
                                                                         <input type="radio" name="time_format" class="styled"/>
                                                                         24-hour clock
                                                                     </label>
-                                                                </div>
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-lg-2 text-right">Photo</label>
+                                                        <div class="col-lg-4">
+                                                            <input type="file" class="file-styled" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="margin-top:-15px;">
+                                                        <label class="control-label col-lg-2 text-right"></label>
+                                                        <div class="col-lg-4">
+                                                            <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="control-label col-lg-2 text-right">Photo</label>
-                                                            <div class="col-lg-4">
-                                                                <input type="file" class="file-styled" />
+                                                            <div class="col-lg-2"></div>
+                                                            <div class="col-lg-10">
+                                                                <button type="button" class="btn btn-primary">Save</button>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group" style="margin-top:-15px;">
-                                                            <label class="control-label col-lg-2 text-right"></label>
-                                                            <div class="col-lg-4">
-                                                                <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <div class="col-lg-2"></div>
-                                                                <div class="col-lg-10">
-                                                                    <button type="button" class="btn btn-primary">Save</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <!-- /edit mailbox -->
                                         </div>
+                                        <!-- /edit mailbox -->
                                     </div>
-                                    <!-- /container sidebar -->
                                 </div>
-                                <!-- /content area -->
+                                <!-- /container sidebar -->
                             </div>
-                            <!-- /main content -->
+                            <!-- /content area -->
                         </div>
-                        <!-- /page content -->
+                        <!-- /main content -->
                     </div>
-                    <!-- /page container -->
-                </body>
+                    <!-- /page content -->
+                </div>
+                <!-- /page container -->
+            </body>
+
             </html>
         </template>
-
         <template name="Company" id="website.settings/company" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -1146,13 +1166,13 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Company Name</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control"/>
+                                                                <input type="text" class="form-control" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2">Next Conversation#</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control"/>
+                                                                <input type="text" class="form-control" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -1204,7 +1224,7 @@
                                                             <label class="control-label col-lg-2">Conversation Lock</label>
                                                             <div class="col-lg-2">
                                                                 <div class="input-group">
-                                                                    <input type="text" placeholder="30" class="form-control"/>
+                                                                    <input type="text" placeholder="30" class="form-control" />
                                                                     <span class="input-group-addon">days</span>
                                                                 </div>
                                                             </div>
@@ -1251,7 +1271,6 @@
                                     </div>
                                 </div>
                                 <!-- /container sidebar -->
-                                
                             </div>
                             <!-- /content content -->
                         </div>
@@ -1264,7 +1283,6 @@
 
             </html>
         </template>
-
         <template name="Auto Reply" id="website.settings/company/autoreply" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -1343,8 +1361,8 @@
                                                             <div class="col-lg-10">
                                                                 <div class="summernote">
                                                                 </div>
-                                                                <p>Auto replies don't include your mailbox signature, so
-                                                                    be sure to add your contact information if necessary.</p>
+                                                                <p>Auto replies don't include your mailbox signature, so be
+                                                                    sure to add your contact information if necessary.</p>
                                                             </div>
                                                         </div>
                                                     </fieldset>
@@ -1371,7 +1389,6 @@
 
             </html>
         </template>
-        
         <template name="Notifications" id="website.settings/notifications" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -1566,16 +1583,18 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="panel panel-body border-top-info">
-                                                <div class="text-left">
+                                                <div class="text-left" style="margin-left:15px">
                                                     <h6 class="no-margin text-semibold">Desarrollo</h6>
-                                                    <p class="content-group-sm text-muted"> <code>desarrollo@globalstd.com</code></p>
+                                                    <p class="content-group-sm text-muted">desarrollo@globalstd.com</p>
                                                 </div>
-                                                <ul style="display: block; position: static; width: 100%; margin-top: 0; float: none;" class="dropdown-menu">
-                                                    <li><a href="#"><span class="badge badge-primary pull-right">65</span>  Unassigred</a></li>
-                                                    <li><a href="#"><span class="badge badge-primary pull-right">23</span>  Mine</a></li>
-                                                    <li><a href="#"><span class="badge badge-primary pull-right">83</span>  Closed</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#"><span class="badge badge-primary pull-right">98</span>  Spam</a></li>
+                                                <ul style="display: block; position: static; width: 100%; margin-top: 0; float: none; border:none  !important; box-shadow:none !important"
+                                                    class="dropdown-menu">
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">65</span>Unassigred</a></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">23</span>Mine</a></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">83</span>Closed</a></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">83</span>Spam</a></li>
+                                                    <!-- <li class="divider"></li>
+                                                    <li><a href="#"><span class="badge badge-primary pull-right">98</span>  Spam</a></li>-->
                                                 </ul>
                                             </div>
                                         </div>
@@ -1612,6 +1631,5 @@
 
             </html>
         </template>
-        
     </data>
 </odoo>
