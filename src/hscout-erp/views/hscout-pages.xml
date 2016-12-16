@@ -595,6 +595,7 @@
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
+            <t t-set="obj" t-value="request.env['res.users'].sudo().search([], order='name')" />
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
@@ -620,205 +621,26 @@
                                 <!-- /user panel -->
                                 <!-- Horizontal icons -->
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face24.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Israel Valdivia
-                                                        <t t-foreach="customer" t-as="customisito">
-                                                            <p>
-                                                                <t t-esc="customisito.id" />
-                                                                <t t-esc="customisito.name" />
-                                                            </p>
-                                                        </t>
-                                                    </h6>
-                                                    <p class="text-muted">User</p>
+                                    <t t-foreach="obj" t-as="item">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="panel panel-body">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
+                                                            <span t-field="item.partner_id.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-circle&quot;}"
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h6 class="media-heading" t-attf-value="{{item and item.partner_id.name}}">
+                                                            <t t-esc="item.partner_id.name" />
+                                                        </h6>
+                                                        <p class="text-muted">User</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face9.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Francisco Mendoza</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face23.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Eduardo Vazquez</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face25.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Gabriel Vazquez</h6>
-                                                    <p class="text-muted">User</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face1.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">James Alexander</h6>
-                                                    <p class="text-muted">Lead developer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face2.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Nathan Jacobson</h6>
-                                                    <p class="text-muted">Lead UX designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face3.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Margo Baker</h6>
-                                                    <p class="text-muted">Sales manager</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face4.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Barbara Walden</h6>
-                                                    <p class="text-muted">SEO specialist</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face11.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Hanna Dorman</h6>
-                                                    <p class="text-muted">UX/UI designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face14.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Benjamin Loretti</h6>
-                                                    <p class="text-muted">Network engineer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face13.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Vanessa Aurelius</h6>
-                                                    <p class="text-muted">Front end guru</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                        <img src="/hscout-erp/static/src/assets/images/demo/users/face8.jpg" style="width: 70px; height: 70px;" class="img-circle"
-                                                            alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">William Brenson</h6>
-                                                    <p class="text-muted">Chief officer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </t>
                                 </div>
                                 <!-- /horizontal icons -->
                             </div>
@@ -1215,10 +1037,10 @@
                                                             <div class="col-lg-10">
                                                                 <div class="checkbox checkbox-switchery">
                                                                     <t t-if="obj.company_id.hs_open_tracking">
-                                                                        <input type="checkbox" class="switchery-primary" checked="checked"/>
+                                                                        <input type="checkbox" class="switchery-primary" checked="checked" />
                                                                     </t>
                                                                     <t t-if="not obj.company_id.hs_open_tracking">
-                                                                        <input type="checkbox" class="switchery-primary"/>
+                                                                        <input type="checkbox" class="switchery-primary" />
                                                                     </t>
                                                                 </div>
                                                             </div>
@@ -1227,7 +1049,7 @@
                                                             <label class="control-label col-lg-2">Conversation Lock</label>
                                                             <div class="col-lg-2">
                                                                 <div class="input-group">
-                                                                    <input type="text" placeholder="30" class="form-control" t-attf-value="{{obj and obj.company_id.hs_conversation_lock}}"/>
+                                                                    <input type="text" placeholder="30" class="form-control" t-attf-value="{{obj and obj.company_id.hs_conversation_lock}}" />
                                                                     <span class="input-group-addon">days</span>
                                                                 </div>
                                                             </div>
