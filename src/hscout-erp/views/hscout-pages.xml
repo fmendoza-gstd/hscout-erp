@@ -62,7 +62,7 @@
                 <div class="navbar-collapse collapse" id="navbar-mobile">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#">
+                            <a href="/page/settings/mailbox">
                                 <span class="position-right">Mailbox</span>
                             </a>
                         </li>
@@ -77,7 +77,7 @@
                                 <i class="caret"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#"><i class="icon-bubbles9"></i> Conversations</a></li>
+                                <li><a href="/page/settings/conversation"><i class="icon-bubbles9"></i> Conversations</a></li>
                                 <li><a href="#"><i class="icon-stats-growth2"></i> Productivity</a></li>
                                 <li><a href="#"><i class="icon-users4"></i>Team</a></li>
                                 <li><a href="#"><i class="icon-thumbs-up2"></i> Happiness</a></li>
@@ -123,7 +123,7 @@
             <!-- /main navbar -->
         </template>
         <!-- === Mailbox === -->
-        <template name="Mailbox" id="website.mailbox" page="True">
+        <template name="Mailbox" id="website.settings/mailbox" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
@@ -156,7 +156,26 @@
                                                         <li><a href="#"><i class="icon-copy3"></i> Drafts <span class="label bg-info-300">1</span></a></li>
                                                         <li><a href="#"><i class="icon-user"></i> Assigned <span class="label bg-info-300">2</span></a></li>
                                                         <li><a href="#"><i class="icon-inbox-alt"></i> Closed <span class="label bg-info-300">3</span></a></li>
-                                                        <li><a href="#"><i class="icon-blocked"></i> Spam <span class="label bg-info-300">4</span></a></li>
+                                                        <li><a href="/page/settings/spam"><i class="icon-blocked"></i> Spam <span class="label bg-info-300">4</span></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <!--<ul class="pull-right">
+                                                            <li><a href="#"><i class="icon-add"></i></a></li>
+                                                        </ul> -->
+                                                    <ul class="pull-left">
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
+                                                            <ul class="dropdown-menu dropdown-menu-left">
+                                                                <li><a href="#">Edit Mailbox</a></li>
+                                                                <li><a href="#">Connection String</a></li>
+                                                                <li><a href="#">Mailbox Permissions</a></li>
+                                                                <li><a href="#">Auto Reply</a></li>
+                                                                <li><a href="#">Saved Replies</a></li>
+                                                                <li><a href="#">Work Flows</a></li>
+                                                                <li><a href="#">Satisfaction Ratinge</a></li>
+                                                            </ul>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -259,7 +278,7 @@
             </html>
         </template>
         <!-- === Conversation === -->
-        <template name="Conversation" id="website.conversation" page="True">
+        <template name="Conversation" id="website.settings/conversation" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
@@ -281,56 +300,50 @@
                                 <!-- Detailed task -->
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <!-- Task details -->
-                                        <div class="panel panel-flat">
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title">Desarrollo</h6>
-                                            </div>
-                                            <table class="table table-borderless table-xs content-group-sm">
-                                                <tbody>
-                                                    <tr>
-                                                        <td><i class="icon-envelope position-left"></i> Unassigned</td>
-                                                        <td class="text-right"><span class="pull-right"><a href="#"><span class="label bg-info-300">1</span></a>
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-add position-left"></i> Mine</td>
-                                                        <td class="text-right"><span class="label bg-info-300">1</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-check position-left"></i> Closed</td>
-                                                        <td class="text-right"><span class="label bg-info-300">1</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-circles2 position-left"></i> Spam</td>
-                                                        <td class="text-right">
-                                                            <span class="label bg-info-300">1</span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="panel-footer">
-                                                <ul class="pull-left">
-                                                    <li><a href="#"><i class="icon-statistics"></i></a></li>
-                                                </ul>
-                                                <ul class="pull-right">
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="#">Edit Mailbox</a></li>
-                                                            <li><a href="#">Connection String</a></li>
-                                                            <li><a href="#">Mailbox Permissions</a></li>
-                                                            <li><a href="#">Auto Reply</a></li>
-                                                            <li><a href="#">Saved Replies</a></li>
-                                                            <li><a href="#">Work Flows</a></li>
-                                                            <li><a href="#">Satisfaction Ratinge</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                        <!-- Detached sidebar -->
+                                        <div class="sidebar-detached">
+                                            <div class="sidebar-default">
+                                                <div class="sidebar-content">
+                                                    <!-- Sub navigation -->
+                                                    <div class="sidebar-category">
+                                                        <div class="category-title">
+                                                            <span>Desarrollo</span>
+                                                        </div>
+                                                        <div class="category-content no-padding">
+                                                            <ul class="navigation navigation-alt navigation-accordion">
+                                                                <li><a href="#"><i class="icon-mailbox"></i> Unassigned</a></li>
+                                                                <li><a href="#"><i class="icon-hand"></i> Mine</a></li>
+                                                                <li><a href="#"><i class="icon-copy3"></i> Drafts <span class="label bg-info-300">1</span></a></li>
+                                                                <li><a href="#"><i class="icon-user"></i> Assigned <span class="label bg-info-300">2</span></a></li>
+                                                                <li><a href="#"><i class="icon-inbox-alt"></i> Closed <span class="label bg-info-300">3</span></a></li>
+                                                                <li><a href="/page/settings/spam"><i class="icon-blocked"></i> Spam <span class="label bg-info-300">4</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="panel-footer">
+                                                            <!--<ul class="pull-right">
+                                                            <li><a href="#"><i class="icon-add"></i></a></li>
+                                                        </ul> -->
+                                                            <ul class="pull-left">
+                                                                <li class="dropdown">
+                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
+                                                                    <ul class="dropdown-menu dropdown-menu-left">
+                                                                        <li><a href="#">Edit Mailbox</a></li>
+                                                                        <li><a href="#">Connection String</a></li>
+                                                                        <li><a href="#">Mailbox Permissions</a></li>
+                                                                        <li><a href="/settings/company/autoreply">Auto Reply</a></li>
+                                                                        <li><a href="#">Saved Replies</a></li>
+                                                                        <li><a href="#">Work Flows</a></li>
+                                                                        <li><a href="#">Satisfaction Ratinge</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /sub navigation -->
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- /task details -->
+                                        <!-- /detached sidebar -->
                                     </div>
                                     <div class="col-lg-6">
                                         <!-- Task overview -->
@@ -467,19 +480,25 @@
                                                 </tbody>
                                             </table>
                                             <hr/>
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title">
-                                                    <strong>
-                                                    Previous Conversations</strong>
-                                                </h6>
+                                            <div class="sidebar-default">
+                                                <div class="sidebar-category">
+                                                    <div class="category-title category-collapsed">
+                                                        <span>Previous Conversations</span>
+                                                        <ul class="icons-list">
+                                                            <li>
+                                                                <a data-action="collapse" href="#" class="rotate-180"></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="category-content no-padding" style="display: none;">
+                                                        <ul class="navigation navigation-alt navigation-accordion">
+                                                            <li><a href="#"><i class="icon-googleplus5"></i> Link</a></li>
+                                                            <li><a href="#"><i class="icon-googleplus5"></i> Another link</a></li>
+                                                            <li><a href="#"><i class="icon-portfolio"></i> Link with label <span class="label bg-success-400">Online</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <table class="table table-borderless table-xs content-group-sm">
-                                                <tbody>
-                                                    <tr>
-                                                        <td><i class="icon-envelope position-left"></i> Learning the basics</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -635,7 +654,9 @@
                                                         <h6 class="media-heading" t-attf-value="{{item and item.partner_id.name}}">
                                                             <t t-esc="item.partner_id.name" />
                                                         </h6>
-                                                        <p class="text-muted">User</p>
+                                                        <p class="text-muted" t-attf-value="{{item and item.partner_id.function}}">
+                                                            <t t-esc="item.partner_id.function" />
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1452,7 +1473,7 @@
                                                     <li><a href="#"><span class="badge badge-primary pull-right">65</span>Unassigred</a></li>
                                                     <li><a href="#"><span class="badge badge-primary pull-right">23</span>Mine</a></li>
                                                     <li><a href="#"><span class="badge badge-primary pull-right">83</span>Closed</a></li>
-                                                    <li><a href="#"><span class="badge badge-primary pull-right">83</span>Spam</a></li>
+                                                    <li><a href="/page/settings/spam"><span class="badge badge-primary pull-right">83</span>Spam</a></li>
                                                     <!-- <li class="divider"></li>
                                                     <li><a href="#"><span class="badge badge-primary pull-right">98</span>  Spam</a></li>-->
                                                 </ul>
