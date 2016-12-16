@@ -96,7 +96,7 @@
                                 <li><a href="#"><i class="icon-thumbs-up2"></i> Docs</a></li>
                                 <li><a href="/page/settings/mailboxes"><i class="icon-files-empty"></i> Mailbox</a></li>
                                 <li><a href="#"><i class="icon-files-empty"></i> Tags</a></li>
-                                <li><a href="#"><i class="icon-files-empty"></i> Users</a></li>
+                                <li><a href="/page/users"><i class="icon-files-empty"></i> Users</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -167,10 +167,10 @@
                                                         <li class="dropdown">
                                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
                                                             <ul class="dropdown-menu dropdown-menu-left">
-                                                                <li><a href="#">Edit Mailbox</a></li>
+                                                                <li><a href="/page/settings/mailbox">Edit Mailbox</a></li>
                                                                 <li><a href="#">Connection String</a></li>
                                                                 <li><a href="#">Mailbox Permissions</a></li>
-                                                                <li><a href="#">Auto Reply</a></li>
+                                                                <li><a href="/page/settings/company/autoreply">Auto Reply</a></li>
                                                                 <li><a href="#">Saved Replies</a></li>
                                                                 <li><a href="#">Work Flows</a></li>
                                                                 <li><a href="#">Satisfaction Ratinge</a></li>
@@ -327,10 +327,10 @@
                                                                 <li class="dropdown">
                                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
                                                                     <ul class="dropdown-menu dropdown-menu-left">
-                                                                        <li><a href="#">Edit Mailbox</a></li>
+                                                                        <li><a href="/page/settings/mailbox">Edit Mailbox</a></li>
                                                                         <li><a href="#">Connection String</a></li>
                                                                         <li><a href="#">Mailbox Permissions</a></li>
-                                                                        <li><a href="/settings/company/autoreply">Auto Reply</a></li>
+                                                                        <li><a href="/page/settings/company/autoreply">Auto Reply</a></li>
                                                                         <li><a href="#">Saved Replies</a></li>
                                                                         <li><a href="#">Work Flows</a></li>
                                                                         <li><a href="#">Satisfaction Ratinge</a></li>
@@ -673,10 +673,10 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Company</a></li>
+                                                        <li><a href="/page/settings/company"><i class="icon-user-tie"></i> Edit Company</a></li>
                                                         <li><a href="#"><i class="icon-unlocked"></i> Features</a></li>
                                                         <li><a href="#"><i class="icon-bell2"></i> Import Data</a></li>
-                                                        <li><a href="#"><i class="icon-users2"></i> Spam Filtering</a></li>
+                                                        <li><a href="/page/settings/spam"><i class="icon-users2"></i> Spam Filtering</a></li>
                                                         <li><a href="#"><i class="icon-key"></i> Office Hours</a></li>
                                                     </ul>
                                                 </div>
@@ -764,7 +764,7 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
+                                                        <li><a href="/page/users/profile"><i class="icon-user-tie"></i> Profile</a></li>
                                                         <li><a href="#"><i class="icon-unlocked"></i> Permissions</a></li>
                                                         <li><a href="#"><i class="icon-bell2"></i> Notifications</a></li>
                                                         <li><a href="#"><i class="icon-users2"></i> Auto Bcc</a></li>
@@ -948,10 +948,10 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Company</a></li>
+                                                        <li><a href="/page/settings/company"><i class="icon-user-tie"></i> Edit Company</a></li>
                                                         <li><a href="#"><i class="icon-unlocked"></i> Features</a></li>
                                                         <li><a href="#"><i class="icon-bell2"></i> Import Data</a></li>
-                                                        <li><a href="#"><i class="icon-users2"></i> Spam Filtering</a></li>
+                                                        <li><a href="/page/settings/spam"><i class="icon-users2"></i> Spam Filtering</a></li>
                                                         <li><a href="#"><i class="icon-key"></i> Office Hours</a></li>
                                                     </ul>
                                                 </div>
@@ -1160,7 +1160,7 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
+                                                        <li><a href="/page/settings/mailbox"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
                                                         <li><a href="#"><i class="icon-unlocked"></i> Connection Settings</a></li>
                                                         <li><a href="#"><i class="icon-bell2"></i> Permissions</a></li>
                                                         <li><a href="/page/settings/company/autoreply"><i class="icon-users2"></i> Auto Reply</a></li>
@@ -1266,7 +1266,7 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="#"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
+                                                        <li><a href="/page/settings/mailbox"><i class="icon-user-tie"></i> Edit Mailbox</a></li>
                                                         <li><a href="#"><i class="icon-unlocked"></i> Connection Settings</a></li>
                                                         <li><a href="#"><i class="icon-bell2"></i> Permissions</a></li>
                                                         <li><a href="/page/settings/company/autoreply"><i class="icon-users2"></i> Auto Reply</a></li>
