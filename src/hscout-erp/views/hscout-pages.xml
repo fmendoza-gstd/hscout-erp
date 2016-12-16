@@ -521,7 +521,8 @@
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
             <t t-set="rid" t-value="request.uid" />
-            <t t-set="obj" t-value="request.env['project.project'].sudo().search([('hs_is_helpdesk','=',True),('user_id','=',rid)])" />
+            <t t-set="obj" t-value="request.env['project.project'].sudo().search([('hs_is_helpdesk','=',True),('user_id','=',rid)])"
+            />
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
@@ -547,19 +548,19 @@
                                 <!-- /user panel -->
                                 <!-- Horizontal icons -->
                                 <div class="row">
-                                    
                                     <t t-foreach="obj" t-as="mailbox">
                                         <div class="col-lg-3 col-md-6">
                                             <div class="panel panel-body">
                                                 <div class="media">
                                                     <div class="media-body">
-                                                        <h6 class="media-heading"><t t-esc="mailbox.name"/></h6>
+                                                        <h6 class="media-heading">
+                                                            <t t-esc="mailbox.name" />
+                                                        </h6>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </t>
-                                    
                                 </div>
                                 <!-- /horizontal icons -->
                             </div>
