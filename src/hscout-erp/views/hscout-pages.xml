@@ -501,6 +501,8 @@
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
+            <t t-set="rid" t-value="request.uid" />
+            <t t-set="obj" t-value="request.env['project.project'].sudo().search([('hs_is_helpdesk','=',True),('user_id','=',rid)])" />
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
@@ -526,56 +528,19 @@
                                 <!-- /user panel -->
                                 <!-- Horizontal icons -->
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Desarrollo</h6>
-                                                    <p class="text-muted">desarrollo@globalstd.com</p>
+                                    
+                                    <t t-foreach="obj" t-as="mailbox">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="panel panel-body">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h6 class="media-heading"><t t-esc="mailbox.name"/></h6>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Ejemplo1</h6>
-                                                    <p class="text-muted">ejemplo1@globalstd.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Ejemplo2</h6>
-                                                    <p class="text-muted">ejemplo2@globalstd.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Ejemplo3</h6>
-                                                    <p class="text-muted">ejemplo3@globalstd.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <div class="panel panel-body">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Ejemplo4</h6>
-                                                    <p class="text-muted">ejemplo4@globalstd.com</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </t>
+                                    
                                 </div>
                                 <!-- /horizontal icons -->
                             </div>
