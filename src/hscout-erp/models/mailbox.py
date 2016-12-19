@@ -12,5 +12,4 @@ class Mailbox(models.Model):
     hs_default_assignee = fields.Selection([('anyone', 'Active'), ('person_reply_unassigned', 'Person Replying (if Unassigned)'), ('person_reply', 'Person Replying')], 'Default Assignee')
     hs_email_template = fields.Selection([('plain', 'Plain Template'), ('fancy', 'Fancy Template')], 'Email Template')
     hs_email_signature = fields.Html('Email Signature')
-    hs_email = fields.Char('Email')
     

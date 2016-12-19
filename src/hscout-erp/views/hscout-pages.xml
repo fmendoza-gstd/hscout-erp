@@ -556,7 +556,7 @@
                                                         <h6 class="media-heading">
                                                             <t t-esc="mailbox.name" />
                                                         </h6>
-                                                        <p class="text-muted"><t t-esc="mailbox.hs_email" /></p>
+                                                        <p class="text-muted"><t t-esc="mailbox.alias_name" />@<t t-esc="mailbox.alias_domain" /></p>
                                                     </div>
                                                 </div>
                                             </div>
