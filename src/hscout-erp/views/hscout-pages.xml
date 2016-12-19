@@ -1621,22 +1621,22 @@
                                                             <div class="col-lg-4">
                                                                 <select name="select" class="form-control">
                                                                     <option value="0">Default Status</option>
-                                                                    <t t-if="obj.hs_from_name == 'active'">
+                                                                    <t t-if="obj.hs_default_status == 'active'">
                                                                         <option value="active" selected="selected">Active</option>
                                                                     </t>
-                                                                    <t t-if="obj.hs_from_name != 'active'">
+                                                                    <t t-if="obj.hs_default_status != 'active'">
                                                                         <option value="active">Active</option>
                                                                     </t>
-                                                                    <t t-if="obj.hs_from_name == 'pending'">
+                                                                    <t t-if="obj.hs_default_status == 'pending'">
                                                                         <option value="pending" selected="selected">Pending</option>
                                                                     </t>
-                                                                    <t t-if="obj.hs_from_name != 'pending'">
+                                                                    <t t-if="obj.hs_default_status != 'pending'">
                                                                         <option value="pending">Pending</option>
                                                                     </t>
-                                                                    <t t-if="obj.hs_from_name == 'closed'">
+                                                                    <t t-if="obj.hs_default_status == 'closed'">
                                                                         <option value="closed" selected="selected">Closed</option>
                                                                     </t>
-                                                                    <t t-if="obj.hs_from_name != 'closed'">
+                                                                    <t t-if="obj.hs_default_status != 'closed'">
                                                                         <option value="closed">Closed</option>
                                                                     </t>
                                                                 </select>
@@ -1698,7 +1698,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2 text-right">Email Signature</label>
                                                             <div class="col-lg-10">
-                                                                <textarea rows="5" cols="5" class="form-control"><t t-raw="hs_email_signature"/></textarea>
+                                                                <textarea rows="5" cols="5" class="form-control"><t t-esc="obj.hs_email_signature"/></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">

@@ -52,6 +52,7 @@
                             <group>
                                 <field name="hs_is_helpdesk" />
                                 <field name="hs_from_name" />
+                                <field name="hs_default_assignee" />
                             </group>
                             <group>
                                 <field name="hs_default_status" />
