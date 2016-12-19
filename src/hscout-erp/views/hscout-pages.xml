@@ -612,17 +612,18 @@
                                             <div class="panel panel-body">
                                                 <div class="media">
                                                     <div class="media-left">
-                                                        <a href="/hscout-erp/static/src/assets/images/demo/images/3.png" data-popup="lightbox">
-                                                            <span t-field="item.partner_id.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-circle&quot;}"
-                                                            />
+                                                        <a>
+                                                           <span t-field="item.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-circle&quot;}"/>
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
-                                                        <h6 class="media-heading" t-attf-value="{{item and item.partner_id.name}}">
-                                                            <t t-esc="item.partner_id.name" />
+                                                        <h6 class="media-heading" t-attf-value="{{item and item.name}}">
+															<a t-attf-href="/page/users/profile?id={{item.id}}">
+																<t t-esc="item.name" />
+															</a>
                                                         </h6>
-                                                        <p class="text-muted" t-attf-value="{{item and item.partner_id.function}}">
-                                                            <t t-esc="item.partner_id.function" />
+                                                        <p class="text-muted" t-attf-value="{{item and item.function}}">
+                                                            <t t-esc="item.function" />
                                                         </p>
                                                     </div>
                                                 </div>
@@ -741,7 +742,12 @@
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
-
+            <t t-set="rid" t-value="False" />
+            <t t-if="'id' in request.params">
+                <t t-set="rid" t-value="request.params['id']" />
+                <t t-set="obj" t-value="request.env['res.users'].sudo().search([('id','=',rid)])" />
+            </t>
+            
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
@@ -800,7 +806,7 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Name</label>
                                                         <div class="col-lg-2">
-                                                            <input type="text" class="form-control" placeholder="Name" />
+                                                            <input type="text" class="form-control" placeholder="Name" t-attf-value="{{obj and obj.name}}" />
                                                         </div>
                                                         <div class="col-lg-2">
                                                             <input type="text" class="form-control" placeholder="Last Name" />
@@ -809,11 +815,11 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Email</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="Main Email" />
+                                                            <input type="text" class="form-control" placeholder="Main Email" t-attf-value="{{obj and obj.email}}"/>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Billing Email</label>
+                                                        <label class="control-label col-lg-2 text-right" t-attf-value="{{obj and obj.hs_billing_email}}">Billing Email</label>
                                                         <div class="col-lg-4">
                                                             <input type="text" class="form-control" />
                                                         </div>
@@ -833,11 +839,11 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Password</label>
                                                         <div class="col-lg-4">
-                                                            <input type="password" class="form-control" />
+                                                            <input type="password" class="form-control" t-attf-value="{{obj and obj.password}}" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-lg-2 text-right">Confirm Password</label>
+                                                        <label class="control-label col-lg-2 text-right" t-attf-value="{{obj and obj.new_password}}">Confirm Password</label>
                                                         <div class="col-lg-4">
                                                             <input type="password" class="form-control" />
                                                         </div>
@@ -845,13 +851,13 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Job Title</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" />
+                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.function}}"/>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Phone Number</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" />
+                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.partner_id.phone}}"/>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -891,13 +897,14 @@
                                                         <div class="col-lg-4">
                                                             <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
                                                         </div>
-                                                        <div class="form-group">
+                                                        
+                                                    </div>
+                                                    <div class="form-group">
                                                             <div class="col-lg-2"></div>
                                                             <div class="col-lg-10">
                                                                 <button type="button" class="btn btn-primary">Save</button>
                                                             </div>
                                                         </div>
-                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
