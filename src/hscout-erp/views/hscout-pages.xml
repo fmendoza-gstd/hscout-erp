@@ -227,38 +227,49 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                
-                                                <t t-foreach="obj.sorted(key=lambda r: r.id)" t-as="task">
-                                                    <tr>
-                                                        <td>#<t t-esc="task.id"/></td>
-                                                        <td><t t-esc="task.partner_id.name"/></td>
-                                                        <td>
-                                                            <t t-foreach="task.tag_ids" t-as="tag">
-                                                                <label class="label label-info"><t t-esc="tag.name"/></label>
-                                                            </t>
-                                                            <div class="text-semibold"><a href="task_manager_detailed.html"><t t-esc="task.name"/></a></div>
-                                                            <div class="text-muted">
-                                                                <t t-set="desc" t-value="str((task.description).encode('UTF-8'))" />
-                                                                <t t-if="len(desc) > 50">
-                                                                    <t t-raw="desc[:50] + '...'"/>
+                                                    <t t-foreach="obj.sorted(key=lambda r: r.id)" t-as="task">
+                                                        <tr>
+                                                            <td>#
+                                                                <t t-esc="task.id" />
+                                                            </td>
+                                                            <td>
+                                                                <t t-esc="task.partner_id.name" />
+                                                            </td>
+                                                            <td>
+                                                                <t t-foreach="task.tag_ids" t-as="tag">
+                                                                    <label class="label label-info"><t t-esc="tag.name"/></label>
                                                                 </t>
-                                                                <t t-if="not len(desc) > 50">
-                                                                    <t t-raw="desc"/>
+                                                                <div class="text-semibold">
+                                                                    <a href="task_manager_detailed.html">
+                                                                        <t t-esc="task.name" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="text-muted">
+                                                                    <t t-set="desc" t-value="str((task.description).encode('UTF-8'))" />
+                                                                    <t t-if="len(desc) > 50">
+                                                                        <t t-raw="desc[:50] + '...'" />
+                                                                    </t>
+                                                                    <t t-if="not len(desc) > 50">
+                                                                        <t t-raw="desc" />
+                                                                    </t>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group input-group-transparent">
+                                                                    <div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
+                                                                    <input type="text" class="form-control datepicker" t-att-value="time.strftime('%d-%M-%Y',time.strptime(task.create_date,'%Y-%m-%d %H:%M:%S'))"
+                                                                    />
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <t t-if="task.user_id">
+                                                                    <a href="#" class="text-default">
+                                                                        <t t-esc="task.user_id.name" />
+                                                                    </a>
                                                                 </t>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-group input-group-transparent">
-                                                                <div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
-                                                                <input type="text" class="form-control datepicker" t-att-value="time.strftime('%d-%M-%Y',time.strptime(task.create_date,'%Y-%m-%d %H:%M:%S'))"/>
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <t t-if="task.user_id"><a href="#" class="text-default"><t t-esc="task.user_id.name"/></a></t>
-                                                        </td>
-                                                    </tr>
-                                                </t>
-
+                                                            </td>
+                                                        </tr>
+                                                    </t>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -283,6 +294,12 @@
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
+            <t t-set="rid" t-value="False" />
+            <t t-if="'id' in request.params">
+                <t t-set="rid" t-value="request.params['id']" />
+                <t t-set="obj" t-value="request.env['project.task'].sudo().search([('id','=',rid)])" />
+                <t t-set="states" t-value="request.env['res.country.state'].sudo().search([], order='name')" />
+            </t>
 
             <body class="sidebar-xs">
                 <!-- Main navbar -->
@@ -300,7 +317,7 @@
                             <div class="content">
                                 <!-- Detailed task -->
                                 <div class="row">
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <!-- Detached sidebar -->
                                         <div class="sidebar-detached">
                                             <div class="sidebar-default">
@@ -321,9 +338,6 @@
                                                             </ul>
                                                         </div>
                                                         <div class="panel-footer">
-                                                            <!--<ul class="pull-right">
-                                                            <li><a href="#"><i class="icon-add"></i></a></li>
-                                                        </ul> -->
                                                             <ul class="pull-left">
                                                                 <li class="dropdown">
                                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i><span class="caret"></span></a>
@@ -346,7 +360,7 @@
                                         </div>
                                         <!-- /detached sidebar -->
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-8">
                                         <!-- Task overview -->
                                         <div class="panel panel-flat">
                                             <div class="panel-footer" style="border-bottom:1px solid #DDD">
@@ -379,107 +393,65 @@
                                                         #2 <span class="label bg-success">ACTIVE</span>
                                                     </p>
                                                 </div>
-                                            </div>
-                                            <div class="panel-body">
-                                                <h6 class="text-semibold">Help Scout replied</h6>
-                                                <div class="heading-elements">
-                                                    <ul class="icons-list">
-                                                        <li class="dropdown">
-                                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
-                                                                <time><abbr>Dec 8,  8:56pm</abbr></time>
-                                                            </a>
-                                                            <li class="dropdown">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-more2"></i></a>
-                                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                                    <li><a href="#"> Delete</a></li>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                    <li><a href="#">Forward</a></li>
-                                                                    <li><a href="#">Toggle Docs Search</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <p class="content-group">
-                                                    Did you know Help Scout can also keep track of voicemails and phone calls? Check out the Voicemail App for a list of supported
-                                                    voicemail providers.
-                                                    <br/> You can log a new phone call by creating a new conversation and
-                                                    selecting the phone icon as the type. Anything you log as a phone call
-                                                    is added as a note to the conversation.
+                                                <p>
+                                                    <t t-raw="obj.description" />
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="panel panel-flat border-left-warning">
-                                            <div class="panel-body">
-                                                <h6 class="text-semibold">you added a note</h6>
-                                                <div class="heading-elements">
-                                                    <ul class="icons-list">
-                                                        <li class="dropdown">
-                                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
-                                                                <time><abbr>Dec 8,  8:56pm</abbr></time>
-                                                            </a>
+                                        <t t-foreach="obj.message_ids" t-as="note">
+                                            <div class="panel panel-flat border-left-info">
+                                                <div class="panel-body">
+                                                    <h6 class="text-semibold">you added a note</h6>
+                                                    <div class="heading-elements">
+                                                        <ul class="icons-list">
                                                             <li class="dropdown">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-more2"></i></a>
-                                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                                    <li><a href="#"> Delete</a></li>
-                                                                    <li><a href="#">Follow</a></li>
-                                                                    <li><a href="#">Forward</a></li>
-                                                                    <li><a href="#">Toggle Docs Search</a></li>
-                                                                </ul>
+                                                                <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="true">
+                                                                    <span t-field="note.create_date" t-field-options='{"format":"d MMMM y H:M:S"}' />
+                                                                </a>
+                                                                <li class="dropdown">
+                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-more2"></i></a>
+                                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                                        <li><a href="#"> Delete</a></li>
+                                                                        <li><a href="#">Follow</a></li>
+                                                                        <li><a href="#">Forward</a></li>
+                                                                        <li><a href="#">Toggle Docs Search</a></li>
+                                                                    </ul>
+                                                                </li>
                                                             </li>
-                                                        </li>
-                                                    </ul>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="content-group">
+                                                        <t t-raw="note.body" />
+                                                    </p>
                                                 </div>
-                                                <p class="content-group">
-                                                    Did you know Help Scout can also keep track of voicemails and phone calls? Check out the Voicemail App for a list of supported
-                                                    voicemail providers.
-                                                    <br/> You can log a new phone call by creating a new conversation and
-                                                    selecting the phone icon as the type. Anything you log as a phone call
-                                                    is added as a note to the conversation.
-                                                </p>
                                             </div>
-                                        </div>
-                                        <!-- /task overview -->
+                                        </t>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-2">
                                         <!-- Latest comments -->
-                                        <div class="panel panel-flat">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td align="center"><img src="https://pbs.twimg.com/profile_images/775739139631124480/nHLTDDyb.jpg"
-                                                            width="70px" class="img-square" alt="" /></td>
-                                                </tr>
-                                            </table>
-                                            <div class="panel-heading">
-                                                <h6 class="panel-title">
-                                                    <strong>
-                                                    Help Scout</strong>
-                                                </h6>
-                                                <br/>
-                                                <spam>Boston, MA</spam>
+                                        <div class="panel panel-flat"><br/>
+                                            <span t-field="obj.partner_id.image" t-field-options='{"widget": "image", "class": "center-block", "max_width": 64}' />
+                                            <div class="sidebar-default">
+                                                <div class="sidebar-category">
+                                                    <div class="category-content no-padding" style="display: block">
+                                                        <ul class="navigation navigation-alt navigation-accordion">
+                                                            <li><a href="#"><strong style="font-size:16px"><t t-esc="obj.partner_id.name"/></strong></a></li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <p>
+                                                                        <t t-esc="obj.partner_id.street" />
+                                                                        <t t-esc="obj.partner_id.zip" />
+                                                                        <t t-esc="obj.partner_id.street2" />
+                                                                        <t t-esc="obj.partner_id.city" />
+                                                                    </p>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="#"><i class="icon-mailbox"></i>  <t t-esc="obj.partner_id.email" /></a></li>
+                                                            <li><a style="padding:0px 20px" href="#"><i class="icon-phone"></i>  <t t-esc="obj.partner_id.phone" /></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <table class="table table-borderless table-xs content-group-sm">
-                                                <tbody>
-                                                    <tr>
-                                                        <td><i class="icon-envelope position-left"></i> help@helpscout.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-add position-left"></i> 855-435-7726</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-check position-left"></i> developer.helpscout.net</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-check position-left"></i> status.helpscout.net/</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-check position-left"></i> helpscout.com</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><i class="icon-alarm-check position-left"></i> helpscout.net</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
                                             <hr/>
                                             <div class="sidebar-default">
                                                 <div class="sidebar-category">
@@ -493,9 +465,9 @@
                                                     </div>
                                                     <div class="category-content no-padding" style="display: none;">
                                                         <ul class="navigation navigation-alt navigation-accordion">
-                                                            <li><a href="#"><i class="icon-googleplus5"></i> Link</a></li>
-                                                            <li><a href="#"><i class="icon-googleplus5"></i> Another link</a></li>
-                                                            <li><a href="#"><i class="icon-portfolio"></i> Link with label <span class="label bg-success-400">Online</span></a></li>
+                                                            <li><a href="#"><i class="icon-googleplus5"></i> evazquez@globalstd.com</a></li>
+                                                            <li><a href="#"><i class="icon-googleplus5"></i> ivaldivia@globalstd.com </a></li>
+                                                            <li><a href="#"><i class="icon-portfolio"></i> software@globalstd.com</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -557,7 +529,10 @@
                                                         <h6 class="media-heading">
                                                             <t t-esc="mailbox.name" />
                                                         </h6>
-                                                        <p class="text-muted"><t t-esc="mailbox.alias_name" />@<t t-esc="mailbox.alias_domain" /></p>
+                                                        <p class="text-muted">
+                                                            <t t-esc="mailbox.alias_name" />@
+                                                            <t t-esc="mailbox.alias_domain" />
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -614,14 +589,15 @@
                                                 <div class="media">
                                                     <div class="media-left">
                                                         <a>
-                                                           <span t-field="item.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-circle&quot;}"/>
+                                                            <span t-field="item.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-circle&quot;}"
+                                                            />
                                                         </a>
                                                     </div>
                                                     <div class="media-body">
                                                         <h6 class="media-heading" t-attf-value="{{item and item.name}}">
-															<a t-attf-href="/page/users/profile?id={{item.id}}">
-																<t t-esc="item.name" />
-															</a>
+                                                            <a t-attf-href="/page/users/profile?id={{item.id}}">
+                                                                <t t-esc="item.name" />
+                                                            </a>
                                                         </h6>
                                                         <p class="text-muted" t-attf-value="{{item and item.function}}">
                                                             <t t-esc="item.function" />
@@ -748,7 +724,7 @@
                 <t t-set="rid" t-value="request.params['id']" />
                 <t t-set="obj" t-value="request.env['res.users'].sudo().search([('id','=',rid)])" />
             </t>
-            
+
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
@@ -816,7 +792,7 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Email</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="Main Email" t-attf-value="{{obj and obj.email}}"/>
+                                                            <input type="text" class="form-control" placeholder="Main Email" t-attf-value="{{obj and obj.email}}" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -852,13 +828,13 @@
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Job Title</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.function}}"/>
+                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.function}}" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-2 text-right">Phone Number</label>
                                                         <div class="col-lg-4">
-                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.partner_id.phone}}"/>
+                                                            <input type="text" class="form-control" placeholder="(Optional)" t-attf-value="{{obj and obj.partner_id.phone}}" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -898,14 +874,13 @@
                                                         <div class="col-lg-4">
                                                             <label class="text-muted">Image will be re-sized to 200x200 JPG,GIF,PNG</label>
                                                         </div>
-                                                        
                                                     </div>
                                                     <div class="form-group">
-                                                            <div class="col-lg-2"></div>
-                                                            <div class="col-lg-10">
-                                                                <button type="button" class="btn btn-primary">Save</button>
-                                                            </div>
+                                                        <div class="col-lg-2"></div>
+                                                        <div class="col-lg-10">
+                                                            <button type="button" class="btn btn-primary">Save</button>
                                                         </div>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
@@ -1487,7 +1462,6 @@
 
             </html>
         </template>
-
         <!-- === Mailboxes === -->
         <template name="Mailbox Detail" id="website.settings/mailbox" page="True">
             <html lang="en">
@@ -1500,7 +1474,7 @@
                 <t t-set="obj" t-value="request.env['project.project'].sudo().search([('id','=',mid)])" />
                 <t t-set="usr" t-value="request.env['res.users'].sudo().search([('id','=',rid)])" />
             </t>
-            
+
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
                 <t t-call="hscout-erp.layout_menu" />
@@ -1563,30 +1537,28 @@
                                             </div>
                                             <div class="panel-body">
                                                 <form class="form-horizontal">
-                                                
                                                     <t t-if="(not mid) or (not obj)">
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-12 text-right">Error 404, mailbox not found.</label>
                                                         </div>
                                                     </t>
-
                                                     <t t-if="mid and obj">
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2 text-right">Mailbox Name</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control" t-att-value="obj.name"/>
+                                                                <input type="text" class="form-control" t-att-value="obj.name" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2 text-right">Email Address</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control"/>
+                                                                <input type="text" class="form-control" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-2 text-right">Aliases</label>
                                                             <div class="col-lg-4">
-                                                                <input type="text" class="form-control" t-att-value="obj.alias_name"/>
+                                                                <input type="text" class="form-control" t-att-value="obj.alias_name" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -1723,8 +1695,8 @@
                 </div>
                 <!-- /page container -->
             </body>
+
             </html>
         </template>
-
     </data>
 </odoo>
