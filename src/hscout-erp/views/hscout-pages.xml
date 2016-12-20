@@ -123,10 +123,36 @@
             <!-- /main navbar -->
         </template>
         <!-- === Mailbox === -->
-        <template name="Mailbox" id="website.settings/mailbox" page="True">
+        <template name="Mailbox" id="website.mailbox" page="True">
             <html lang="en">
             <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
             <t t-call="hscout-erp.layout_head" />
+            <t t-set="rid" t-value="request.uid" />
+            <t t-set="mid" t-value="False" />
+            <t t-if="'id' in request.params">
+                <t t-set="mid" t-value="request.params['id']" />
+                <t t-set="obj" t-value="request.env['project.task'].sudo().search([('project_id','=',int(mid))])" />
+                <t t-set="usr" t-value="request.env['res.users'].sudo().search([('id','=',int(rid))])" />
+                <t t-set="closed" t-value="request.env['project.task.type'].sudo().search([('id','=',6)])" />
+            </t>
+            <t t-set="count1" t-value="0" />
+            <t t-set="count2" t-value="0" />
+            <t t-set="count3" t-value="0" />
+            <t t-set="count4" t-value="0" />
+            <t t-foreach="obj" t-as="task">
+                <t t-if="(closed not in task.stage_id) and (not task.user_id)">
+                    <t t-set="count1" t-value="count1 + 1" />
+                </t>
+                <t t-if="(closed not in task.stage_id) and (usr in task.user_id)">
+                    <t t-set="count2" t-value="count2 + 1" />
+                </t>
+                <t t-if="(closed not in task.stage_id) and task.user_id">
+                    <t t-set="count3" t-value="count3 + 1" />
+                </t>
+                <t t-if="closed in task.stage_id">
+                    <t t-set="count4" t-value="count4 + 1" />
+                </t>
+            </t>
 
             <body class="sidebar-xs has-detached-left">
                 <!-- Main navbar -->
@@ -151,12 +177,12 @@
                                                 </div>
                                                 <div class="category-content no-padding">
                                                     <ul class="navigation navigation-alt navigation-accordion">
-                                                        <li><a href="#"><i class="icon-mailbox"></i> Unassigned</a></li>
-                                                        <li><a href="#"><i class="icon-hand"></i> Mine</a></li>
-                                                        <li><a href="#"><i class="icon-copy3"></i> Drafts <span class="label bg-info-300">1</span></a></li>
-                                                        <li><a href="#"><i class="icon-user"></i> Assigned <span class="label bg-info-300">2</span></a></li>
-                                                        <li><a href="#"><i class="icon-inbox-alt"></i> Closed <span class="label bg-info-300">3</span></a></li>
-                                                        <li><a href="/page/settings/spam"><i class="icon-blocked"></i> Spam <span class="label bg-info-300">4</span></a></li>
+                                                        <li><a href="#"><i class="icon-mailbox"></i> Unassigned     <t t-if="count1 > 0"><span class="label bg-info-300"><t t-esc="count1"/></span></t></a></li>
+                                                        <li><a href="#"><i class="icon-hand"></i> Mine              <t t-if="count2 > 0"><span class="label bg-info-300"><t t-esc="count2"/></span></t></a></li>
+                                                        <li><a href="#"><i class="icon-copy3"></i> Drafts </a></li>
+                                                        <li><a href="#"><i class="icon-user"></i> Assigned          <t t-if="count3 > 0"><span class="label bg-info-300"><t t-esc="count3"/></span></t></a></li>
+                                                        <li><a href="#"><i class="icon-inbox-alt"></i> Closed       <t t-if="count4 > 0"><span class="label bg-info-300"><t t-esc="count4"/></span></t></a></li>
+                                                        <li><a href="/page/settings/spam"><i class="icon-blocked"></i> Spam </a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="panel-footer">
@@ -197,67 +223,42 @@
                                                         <th>Customer</th>
                                                         <th>Conversation</th>
                                                         <th>Latest update</th>
-                                                        <th>Assigned</th>
+                                                        <th class="text-center">Assigned</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                
+                                                <t t-foreach="obj.sorted(key=lambda r: r.id)" t-as="task">
                                                     <tr>
-                                                        <td>#25</td>
-                                                        <td>Today</td>
+                                                        <td>#<t t-esc="task.id"/></td>
+                                                        <td><t t-esc="task.partner_id.name"/></td>
                                                         <td>
-                                                            <label class="label label-info">info</label>
-                                                            <label class="label label-warning">warning</label>
-                                                            <div class="text-semibold"><a href="task_manager_detailed.html">New blog layout</a></div>
-                                                            <div class="text-muted">Grumbled ripely eternal sniffed the when hello less much..</div>
+                                                            <t t-foreach="task.tag_ids" t-as="tag">
+                                                                <label class="label label-info"><t t-esc="tag.name"/></label>
+                                                            </t>
+                                                            <div class="text-semibold"><a href="task_manager_detailed.html"><t t-esc="task.name"/></a></div>
+                                                            <div class="text-muted">
+                                                                <t t-set="desc" t-value="str((task.description).encode('UTF-8'))" />
+                                                                <t t-if="len(desc) > 50">
+                                                                    <t t-raw="desc[:50] + '...'"/>
+                                                                </t>
+                                                                <t t-if="not len(desc) > 50">
+                                                                    <t t-raw="desc"/>
+                                                                </t>
+                                                            </div>
                                                         </td>
                                                         <td>
                                                             <div class="input-group input-group-transparent">
                                                                 <div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
-                                                                <input type="text" class="form-control datepicker" value="22 January, 15" />
+                                                                <input type="text" class="form-control datepicker" t-att-value="time.strftime('%d-%M-%Y',time.strptime(task.create_date,'%Y-%m-%d %H:%M:%S'))"/>
                                                             </div>
                                                         </td>
                                                         <td class="text-center">
-                                                            <a href="#" class="text-default"><i class="icon-plus22"></i></a>
+                                                            <t t-if="task.user_id"><a href="#" class="text-default"><t t-esc="task.user_id.name"/></a></t>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>#24</td>
-                                                        <td>Today</td>
-                                                        <td>
-                                                            <label class="label label-danger">danger</label>
-                                                            <label class="label label-default">default</label>
-                                                            <div class="text-semibold"><a href="task_manager_detailed.html">Create UI design model</a></div>
-                                                            <div class="text-muted">One morning, when Gregor Samsa woke from troubled..</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-group input-group-transparent">
-                                                                <div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
-                                                                <input type="text" class="form-control datepicker" value="22 January, 15" />
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="text-default"><i class="icon-plus22"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>#23</td>
-                                                        <td>Today</td>
-                                                        <td>
-                                                            <label class="label label-success">success</label>
-                                                            <div class="text-semibold"><a href="task_manager_detailed.html">New icons set for an iOS app</a></div>
-                                                            <div class="text-muted">A collection of textile samples lay spread out on the table..</div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input-group input-group-transparent">
-                                                                <div class="input-group-addon"><i class="icon-calendar2 position-left"></i></div>
-                                                                <input type="text" class="form-control datepicker" value="22 January, 15" />
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#"><img src="/hscout-erp/static/src/assets/images/demo/users/face13.jpg"
-                                                                    class="img-circle img-xs" alt="" /></a>
-                                                        </td>
-                                                    </tr>
+                                                </t>
+
                                                 </tbody>
                                             </table>
                                         </div>
