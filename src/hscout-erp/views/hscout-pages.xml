@@ -1593,7 +1593,6 @@
                                                             <label class="control-label col-lg-2 text-right">From Name</label>
                                                             <div class="col-lg-4">
                                                                 <select name="select" class="form-control">
-                                                                    <option value="0">From Name</option>
                                                                     <t t-if="obj.hs_from_name == 'mailbox'">
                                                                         <option value="mailbox" selected="selected">Mailbox Name</option>
                                                                     </t>
@@ -1621,7 +1620,6 @@
                                                             <label class="control-label col-lg-2 text-right">Default Status</label>
                                                             <div class="col-lg-4">
                                                                 <select name="select" class="form-control">
-                                                                    <option value="0">Default Status</option>
                                                                     <t t-if="obj.hs_default_status == 'active'">
                                                                         <option value="active" selected="selected">Active</option>
                                                                     </t>
@@ -1647,7 +1645,6 @@
                                                             <label class="control-label col-lg-2 text-right">Default Assignee</label>
                                                             <div class="col-lg-4">
                                                                 <select name="select" class="form-control">
-                                                                    <option value="0">Default Assignee</option>
                                                                     <t t-if="obj.hs_default_assignee == 'anyone'">
                                                                         <option value="anyone" selected="selected">Active</option>
                                                                     </t>
